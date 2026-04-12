@@ -46,13 +46,7 @@
 <!-- ═══════════════ HEADER ═══════════════ -->
 <header class="site-header" role="banner">
   <div class="container header-inner">
-    <a href="/gesa/" class="logo" aria-label="GESA – Homepage">
-      <div class="logo-icon" aria-hidden="true">🏔️</div>
-      <div class="logo-text">
-        <span class="logo-title">GESA</span>
-        <span class="logo-sub">Selvino · Aviatico</span>
-      </div>
-    </a>
+    <a href="/gesa/" class="logo" aria-label="GESA – Homepage"><img src="/gesa/assets/img/logo-gesa.png" alt="Logo GESA" class="logo-img"><div class="logo-text"><span class="logo-title">GESA</span><span class="logo-sub">Selvino · Aviatico</span></div></a>
 
     <nav class="nav-desktop" aria-label="Navigazione principale">
       <a href="/gesa/">Home</a>
@@ -111,6 +105,17 @@
     </div>
   </div>
 </section>
+
+<!-- ═══════════════ PHOTO CAROUSEL ═══════════════ -->
+<div class="photo-carousel" aria-label="Foto dell'Altopiano">
+  <div class="carousel-track" id="carouselTrack">
+    <div class="carousel-slide"><img src="/gesa/assets/img/panorama-selvino.jpg" alt="Panorama di Selvino e l'Altopiano" loading="eager"></div>
+    <div class="carousel-slide"><img src="/gesa/assets/img/sitogesa_1.jpg" alt="Veduta sull'Altopiano di Selvino Aviatico" loading="lazy"></div>
+  </div>
+  <button class="carousel-btn carousel-prev" aria-label="Precedente">&#8249;</button>
+  <button class="carousel-btn carousel-next" aria-label="Successiva">&#8250;</button>
+  <div class="carousel-dots" id="carouselDots"></div>
+</div>
 
 <!-- ═══════════════ SEZIONI PRINCIPALI ═══════════════ -->
 <section class="section">
@@ -227,17 +232,31 @@
 <!-- ═══════════════ QR CODE INFO ═══════════════ -->
 <section class="section">
   <div class="container">
-    <div style="display:grid;gap:2rem;grid-template-columns:1fr;align-items:center;">
-      <div class="reveal" style="max-width:640px;margin:auto;text-align:center;">
-        <div style="font-size:4rem;margin-bottom:1.5rem;">📱</div>
-        <h2 style="font-size:clamp(1.4rem,3vw,2rem);font-weight:800;color:var(--color-text);margin-bottom:1rem;">
-          QR code sul territorio
-        </h2>
-        <p style="font-size:1rem;color:var(--color-text-muted);line-height:1.75;margin-bottom:1.5rem;">
-          In corrispondenza dei sentieri trovi cartelli con QR code: inquadrali con il telefono
-          per aprire direttamente la mappa interattiva del percorso senza dover cercare nulla.
-        </p>
+    <div class="qr-section reveal">
+      <div class="qr-img-wrap">
+        <img src="/gesa/assets/img/qrcode-sign.jpg" alt="Cartello QR code sul territorio – A002" class="qr-sign-img">
+      </div>
+      <div class="qr-text">
+        <h2>QR code sul territorio</h2>
+        <p>In corrispondenza dei sentieri trovi cartelli con QR code: inquadrali con il telefono per aprire direttamente la mappa interattiva del percorso senza dover cercare nulla.</p>
         <a href="/gesa/sentieri/" class="btn btn-outline">🗺️ Esplora i sentieri</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CONTATTI ═══════════════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Contatti</span>
+      <h2>Hai domande? Scrivici</h2>
+    </div>
+    <div class="contact-card reveal">
+      <div class="contact-icon">📞</div>
+      <div class="contact-info">
+        <div class="contact-name">Massimo Grigis</div>
+        <a href="tel:+393355372168" class="contact-phone">335 537 2168</a>
       </div>
     </div>
   </div>
@@ -257,13 +276,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-logo">
-        <a href="/gesa/" class="logo">
-          <div class="logo-icon">🏔️</div>
-          <div class="logo-text">
-            <span class="logo-title">GESA</span>
-            <span class="logo-sub">Selvino · Aviatico</span>
-          </div>
-        </a>
+        <a href="/gesa/" class="logo"><img src="/gesa/assets/img/logo-gesa.png" alt="Logo GESA" class="logo-img"><div class="logo-text"><span class="logo-title">GESA</span><span class="logo-sub">Selvino · Aviatico</span></div></a>
         <p class="footer-tagline">
           Gruppo Ecologico Selvino Aviatico.<br>
           Promuoviamo la conoscenza e la valorizzazione<br>
@@ -311,5 +324,32 @@
 </footer>
 
 <script src="/gesa/assets/js/main.js"></script>
+<script>
+(function(){
+  var track = document.getElementById('carouselTrack');
+  var dotsEl = document.getElementById('carouselDots');
+  if (!track) return;
+  var slides = track.querySelectorAll('.carousel-slide');
+  var total = slides.length;
+  var cur = 0;
+  // Create dots
+  slides.forEach(function(_,i){
+    var d = document.createElement('button');
+    d.className = 'carousel-dot' + (i===0?' active':'');
+    d.setAttribute('aria-label','Slide '+(i+1));
+    d.addEventListener('click', function(){ go(i); });
+    dotsEl.appendChild(d);
+  });
+  function go(n){
+    cur = (n + total) % total;
+    track.style.transform = 'translateX(-'+cur*100+'%)';
+    dotsEl.querySelectorAll('.carousel-dot').forEach(function(d,i){ d.classList.toggle('active',i===cur); });
+  }
+  document.querySelector('.carousel-prev').addEventListener('click', function(){ go(cur-1); });
+  document.querySelector('.carousel-next').addEventListener('click', function(){ go(cur+1); });
+  // Auto-play
+  setInterval(function(){ go(cur+1); }, 5000);
+})();
+</script>
 </body>
 </html>
