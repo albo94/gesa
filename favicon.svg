@@ -1,15 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1b4332"/>
-      <stop offset="100%" style="stop-color:#2c6e49"/>
-    </linearGradient>
-  </defs>
-  <!-- Background circle -->
-  <circle cx="32" cy="32" r="32" fill="url(#bg)"/>
-  <!-- Mountain silhouette -->
-  <polygon points="10,50 32,18 54,50" fill="white" opacity="0.9"/>
-  <polygon points="22,50 38,28 54,50" fill="#52b788" opacity="0.85"/>
-  <!-- Snow cap -->
-  <polygon points="28,22 32,18 36,22 32,26" fill="white"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Bordo esterno verde scuro (logo GESA) -->
+  <circle cx="50" cy="50" r="49" fill="#1b563f"/>
+  <!-- Riempimento verde lime (logo GESA) -->
+  <circle cx="50" cy="50" r="42" fill="#a6c539"/>
+  <!-- Sole giallo -->
+  <circle cx="50" cy="36" r="13" fill="#fff101"/>
+  <!-- Montagna grigia -->
+  <polygon points="50,16 28,50 72,50" fill="#c2c3c6"/>
+  <polygon points="50,20 36,44 64,44" fill="#dcdde0"/>
+  <!-- Neve -->
+  <polygon points="44,26 50,16 56,26 50,30" fill="white"/>
+  <!-- Testo GESA -->
+  <text x="50" y="63" text-anchor="middle" font-family="Arial Black,Arial,sans-serif"
+        font-size="17" font-weight="900" fill="#231f20" letter-spacing="0.5">GESA</text>
+  <!-- Corda gialla (semplificata) -->
+  <path d="M28,75 Q50,68 72,75" fill="none" stroke="#fff101" stroke-width="5" stroke-linecap="round"/>
+  <path d="M32,80 Q42,87 50,80 Q58,73 68,80" fill="none" stroke="#fff101" stroke-width="4.5" stroke-linecap="round"/>
 </svg>

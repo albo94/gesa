@@ -26,21 +26,21 @@ button { cursor: pointer; font-family: inherit; }
    DESIGN TOKENS
    ======================================== */
 :root {
-  /* Colors */
-  --color-primary:       #2c6e49;
-  --color-primary-light: #52b788;
-  --color-primary-dark:  #1b4332;
-  --color-primary-glow:  rgba(44, 110, 73, 0.12);
-  --color-accent:        #d4a017;
-  --color-accent-light:  #f5cc5e;
-  --color-surface:       #f4faf5;
-  --color-surface-2:     #e8f4ec;
-  --color-surface-3:     #d8eedd;
+  /* Colors — basati sui colori esatti del logo GESA */
+  --color-primary:       #1b563f;  /* verde scuro (bordo logo) */
+  --color-primary-light: #a6c539;  /* verde lime (riempimento logo) */
+  --color-primary-dark:  #0f3020;  /* verde molto scuro */
+  --color-primary-glow:  rgba(27, 86, 63, 0.12);
+  --color-accent:        #c8a800;  /* giallo/oro (corda logo, leggermente smorzato) */
+  --color-accent-light:  #fff101;  /* giallo brillante logo */
+  --color-surface:       #f5f7ee;  /* bianco caldo */
+  --color-surface-2:     #edf2df;
+  --color-surface-3:     #dce8c8;
   --color-white:         #ffffff;
-  --color-text:          #1a2316;
-  --color-text-muted:    #4a6455;
-  --color-text-light:    #7a9486;
-  --color-border:        #cce5d3;
+  --color-text:          #231f20;  /* quasi nero del logo */
+  --color-text-muted:    #4a5830;
+  --color-text-light:    #7a8a50;
+  --color-border:        #c8d890;
 
   /* Difficulty */
   --color-easy:      #16a34a;
@@ -206,7 +206,7 @@ button { cursor: pointer; font-family: inherit; }
    ======================================== */
 .hero {
   position: relative; overflow: hidden;
-  background: linear-gradient(145deg, #0f2d1a 0%, var(--color-primary-dark) 40%, var(--color-primary) 100%);
+  background: linear-gradient(145deg, #3d2000 0%, #1b563f 50%, #2d6e1a 100%);
   color: white;
   min-height: 560px;
   display: flex; align-items: center;
@@ -423,7 +423,7 @@ button { cursor: pointer; font-family: inherit; }
    TRAIL DETAIL PAGE
    ======================================== */
 .page-hero {
-  background: linear-gradient(145deg, #0f2d1a 0%, var(--color-primary-dark) 60%, var(--color-primary) 100%);
+  background: linear-gradient(145deg, #3d2000 0%, #1b563f 60%, #2d6e1a 100%);
   color: white; padding: var(--sp-12) 0 var(--sp-10);
   position: relative; overflow: hidden;
 }
@@ -601,7 +601,7 @@ button { cursor: pointer; font-family: inherit; }
    CTA BANNER
    ======================================== */
 .cta-banner {
-  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  background: linear-gradient(135deg, #3d2000 0%, #1b563f 100%);
   color: white; text-align: center; padding: var(--sp-16) 0;
 }
 .cta-banner h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 800;
