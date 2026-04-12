@@ -4,38 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contrade di Selvino e Aviatico – GESA</title>
-  <meta name="description" content="Le 8 contrade storiche dell'Altopiano di Selvino e Aviatico: Brancane, Quatrè, Schene, Sort o Ca di Roc, Tes, Tirè, Tunè, Ulia. Storia e tradizioni locali.">
+  <meta name="description" content="Le 8 contrade storiche dell'Altopiano di Selvino e Aviatico: Brancane, Quatrì, Schene, Sort o Ca di Roc, Tes, Tirù, Tunù, Ulia. Storia e tradizioni locali.">
   <link rel="canonical" href="https://www.gruppoecologicoselvinoaviatico.it/contrade/">
   <meta property="og:title"       content="Contrade di Selvino e Aviatico – GESA">
-  <meta property="og:description" content="Le 8 contrade storiche dell'Altopiano: Brancane, Quatrè, Schene, Sort, Tes, Tirè, Tunè, Ulia.">
+  <meta property="og:description" content="Le 8 contrade storiche dell'Altopiano: Brancane, Quatrì, Schene, Sort, Tes, Tirù, Tunù, Ulia.">
   <meta property="og:url"         content="https://www.gruppoecologicoselvinoaviatico.it/contrade/">
-  <link rel="icon" href="/gesa/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/gesa/assets/img/logo-gesa.png" type="image/png">
   <link rel="stylesheet" href="/gesa/assets/css/style.css">
+  <style>
+    .contrade-poster-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: var(--sp-6);
+      margin-top: var(--sp-8);
+    }
+    .contrada-poster-card {
+      background: var(--color-white);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .contrada-poster-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .contrada-poster-img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+    .contrada-poster-footer {
+      padding: var(--sp-4) var(--sp-5);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--sp-3);
+    }
+    .contrada-poster-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--color-text);
+    }
+    .contrada-poster-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .contrada-poster-link:hover { color: var(--color-primary-dark); }
+  </style>
 </head>
 <body>
 
-<header class="site-header" role="banner">
-  <div class="container header-inner">
-    <a href="/gesa/" class="logo" aria-label="GESA – Homepage">
-      <div class="logo-icon" aria-hidden="true">🏔️</div>
-      <div class="logo-text">
-        <span class="logo-title">GESA</span>
-        <span class="logo-sub">Selvino · Aviatico</span>
-      </div>
-    </a>
-    <nav class="nav-desktop" aria-label="Navigazione principale">
-      <a href="/gesa/">Home</a>
-      <a href="/gesa/sentieri/">Sentieri</a>
-      <a href="/gesa/palestra/">Palestra</a>
-      <a href="/gesa/contrade/">Contrade</a>
-    </nav>
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMobile" aria-label="Apri menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-
-<nav class="nav-mobile" id="navMobile" aria-label="Navigazione mobile">
+<header class="site-header"><div class="container header-inner">
+  <a href="/gesa/" class="logo"><img src="/gesa/assets/img/logo-gesa.png" alt="Logo GESA" class="logo-img"><div class="logo-text"><span class="logo-title">GESA</span><span class="logo-sub">Selvino · Aviatico</span></div></a>
+  <nav class="nav-desktop"><a href="/gesa/">Home</a><a href="/gesa/sentieri/">Sentieri</a><a href="/gesa/palestra/">Palestra</a><a href="/gesa/contrade/">Contrade</a></nav>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMobile" aria-label="Apri menu"><span></span><span></span><span></span></button>
+</div></header>
+<nav class="nav-mobile" id="navMobile">
   <a href="/gesa/"><span class="nav-icon">🏠</span> Home</a>
   <a href="/gesa/sentieri/"><span class="nav-icon">🥾</span> Sentieri ad Anello</a>
   <a href="/gesa/palestra/"><span class="nav-icon">🧗</span> Palestra di Arrampicata</a>
@@ -45,10 +78,7 @@
 <!-- Hero -->
 <section class="page-hero">
   <div class="container page-hero-content">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="/gesa/">Home</a><span class="sep">›</span>
-      <span>Contrade</span>
-    </nav>
+    <nav class="breadcrumb"><a href="/gesa/">Home</a><span class="sep">›</span><span>Contrade</span></nav>
     <div class="hero-badge">🏘️ 8 contrade storiche · Selvino &amp; Aviatico</div>
     <h1>Le Contrade dell'Altopiano</h1>
     <div class="hero-meta-pills">
@@ -59,7 +89,7 @@
   </div>
 </section>
 
-<!-- Introduzione -->
+<!-- Introduzione + Poster -->
 <section class="section">
   <div class="container">
     <div class="section-header reveal">
@@ -72,85 +102,77 @@
       </p>
     </div>
 
-    <div class="contrade-grid">
+    <div class="contrade-poster-grid">
 
-      <div class="contrada-card reveal" id="brancane">
-        <div class="contrada-icon">🏠</div>
-        <h3>Brancane</h3>
-        <p>
-          Contrada del territorio di Selvino, caratterizzata da case tradizionali in pietra locale.
-          Il nome richiama antiche tradizioni rurali dell'Altopiano orobico.
-        </p>
+      <div class="contrada-poster-card reveal" id="brancane">
+        <img src="/gesa/assets/img/contrade/brancane.png" alt="Contrada Brancane – Selvino" class="contrada-poster-img" loading="lazy">
+        <div class="contrada-poster-footer">
+          <span class="contrada-poster-name">Brancane</span>
+          <a href="/gesa/assets/img/contrade/brancane.png" target="_blank" rel="noopener" class="contrada-poster-link">🔍 Ingrandisci</a>
+        </div>
       </div>
 
-      <div class="contrada-card reveal" id="quatre">
-        <div class="contrada-icon">🏠</div>
-        <h3>Quatrè</h3>
-        <p>
-          Piccolo nucleo abitativo dall'etimologia dialettale bergamasca.
-          Conserva elementi architettonici tipici della tradizione montana locale.
-        </p>
+      <div class="contrada-poster-card reveal" id="quatri">
+        <img src="/gesa/assets/img/contrade/quatri.png" alt="Contrada Quatrì" class="contrada-poster-img" loading="lazy">
+        <div class="contrada-poster-footer">
+          <span class="contrada-poster-name">Quatrì</span>
+          <a href="/gesa/assets/img/contrade/quatri.png" target="_blank" rel="noopener" class="contrada-poster-link">🔍 Ingrandisci</a>
+        </div>
       </div>
 
-      <div class="contrada-card reveal" id="schene">
-        <div class="contrada-icon">🏠</div>
-        <h3>Schene</h3>
-        <p>
-          Contrada immersa nel verde dell'Altopiano. Il nome in dialetto bergamasco
-          rimanda alla conformazione del terreno, tipica di queste quote.
-        </p>
+      <div class="contrada-poster-card reveal" id="schene">
+        <img src="/gesa/assets/img/contrade/schene.png" alt="Contrada Schene" class="contrada-poster-img" loading="lazy">
+        <div class="contrada-poster-footer">
+          <span class="contrada-poster-name">Schene</span>
+          <a href="/gesa/assets/img/contrade/schene.png" target="_blank" rel="noopener" class="contrada-poster-link">🔍 Ingrandisci</a>
+        </div>
       </div>
 
-      <div class="contrada-card reveal" id="sort">
-        <div class="contrada-icon">🏠</div>
-        <h3>Sort o Ca di Roc</h3>
-        <p>
-          Conosciuta anche come "Ca di Roc" (Casa delle Rocce), questa contrada
-          deve il suo nome alla presenza di affioramenti rocciosi caratteristici.
-        </p>
+      <div class="contrada-poster-card reveal" id="sort">
+        <img src="/gesa/assets/img/contrade/sort-o-ca-di-roc.png" alt="Contrada Sort o Ca di Roc" class="contrada-poster-img" loading="lazy">
+        <div class="contrada-poster-footer">
+          <span class="contrada-poster-name">Sort o Ca di Roc</span>
+          <a href="/gesa/assets/img/contrade/sort-o-ca-di-roc.png" target="_blank" rel="noopener" class="contrada-poster-link">🔍 Ingrandisci</a>
+        </div>
       </div>
 
-      <div class="contrada-card reveal" id="tes">
-        <div class="contrada-icon">🏠</div>
-        <h3>Tes</h3>
-        <p>
-          Antico insediamento dell'Altopiano con tradizioni agricole e pastorali.
-          Il nome dialettale richiama le tese, strutture tipiche per la caccia agli uccelli migratori.
-        </p>
+      <div class="contrada-poster-card reveal" id="tes">
+        <img src="/gesa/assets/img/contrade/tes.png" alt="Contrada Tes" class="contrada-poster-img" loading="lazy">
+        <div class="contrada-poster-footer">
+          <span class="contrada-poster-name">Tes</span>
+          <a href="/gesa/assets/img/contrade/tes.png" target="_blank" rel="noopener" class="contrada-poster-link">🔍 Ingrandisci</a>
+        </div>
       </div>
 
-      <div class="contrada-card reveal" id="tire">
-        <div class="contrada-icon">🏠</div>
-        <h3>Tirè</h3>
-        <p>
-          Contrada dal carattere raccolto, tipica dell'architettura rurale orobica.
-          Offre scorci panoramici sull'Altopiano e le valli circostanti.
-        </p>
+      <div class="contrada-poster-card reveal" id="tiru">
+        <img src="/gesa/assets/img/contrade/tiru.png" alt="Contrada Tirù" class="contrada-poster-img" loading="lazy">
+        <div class="contrada-poster-footer">
+          <span class="contrada-poster-name">Tirù</span>
+          <a href="/gesa/assets/img/contrade/tiru.png" target="_blank" rel="noopener" class="contrada-poster-link">🔍 Ingrandisci</a>
+        </div>
       </div>
 
-      <div class="contrada-card reveal" id="tune">
-        <div class="contrada-icon">🏠</div>
-        <h3>Tunè</h3>
-        <p>
-          Piccolo borgo storico che ha mantenuto il suo carattere originario nel tempo.
-          Meta di piacevoli passeggiate dai sentieri dell'Altopiano.
-        </p>
+      <div class="contrada-poster-card reveal" id="tunu">
+        <img src="/gesa/assets/img/contrade/tunu.png" alt="Contrada Tunù" class="contrada-poster-img" loading="lazy">
+        <div class="contrada-poster-footer">
+          <span class="contrada-poster-name">Tunù</span>
+          <a href="/gesa/assets/img/contrade/tunu.png" target="_blank" rel="noopener" class="contrada-poster-link">🔍 Ingrandisci</a>
+        </div>
       </div>
 
-      <div class="contrada-card reveal" id="ulia">
-        <div class="contrada-icon">🏠</div>
-        <h3>Ulia</h3>
-        <p>
-          Contrada storica del territorio di Aviatico, con vedute aperte sulle Prealpi
-          orobiche. Il nome è di probabile origine preromana.
-        </p>
+      <div class="contrada-poster-card reveal" id="ulia">
+        <img src="/gesa/assets/img/contrade/ulia.png" alt="Contrada Ulia" class="contrada-poster-img" loading="lazy">
+        <div class="contrada-poster-footer">
+          <span class="contrada-poster-name">Ulia</span>
+          <a href="/gesa/assets/img/contrade/ulia.png" target="_blank" rel="noopener" class="contrada-poster-link">🔍 Ingrandisci</a>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- Approfondimento territorio -->
+<!-- Sentieri correlati -->
 <section class="section section-alt">
   <div class="container">
     <div class="section-header reveal">
@@ -189,46 +211,38 @@
   </div>
 </div>
 
-<footer class="site-footer" role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-logo">
-        <a href="/gesa/" class="logo">
-          <div class="logo-icon">🏔️</div>
-          <div class="logo-text">
-            <span class="logo-title">GESA</span>
-            <span class="logo-sub">Selvino · Aviatico</span>
-          </div>
-        </a>
-        <p class="footer-tagline">Gruppo Ecologico Selvino Aviatico.<br>Altopiano di Selvino e Aviatico (BG).</p>
-      </div>
-      <div>
-        <h3 class="footer-heading">Contrade</h3>
-        <ul class="footer-links">
-          <li><a href="/gesa/contrade/#brancane">Brancane</a></li>
-          <li><a href="/gesa/contrade/#quatre">Quatrè</a></li>
-          <li><a href="/gesa/contrade/#schene">Schene</a></li>
-          <li><a href="/gesa/contrade/#sort">Sort o Ca di Roc</a></li>
-          <li><a href="/gesa/contrade/#tes">Tes</a></li>
-          <li><a href="/gesa/contrade/#tire">Tirè</a></li>
-          <li><a href="/gesa/contrade/#tune">Tunè</a></li>
-          <li><a href="/gesa/contrade/#ulia">Ulia</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="footer-heading">Sezioni</h3>
-        <ul class="footer-links">
-          <li><a href="/gesa/sentieri/">Sentieri ad Anello</a></li>
-          <li><a href="/gesa/palestra/">Palestra Arrampicata</a></li>
-        </ul>
-      </div>
+<footer class="site-footer"><div class="container">
+  <div class="footer-grid">
+    <div class="footer-logo">
+      <a href="/gesa/" class="logo"><img src="/gesa/assets/img/logo-gesa.png" alt="Logo GESA" class="logo-img"><div class="logo-text"><span class="logo-title">GESA</span><span class="logo-sub">Selvino · Aviatico</span></div></a>
+      <p class="footer-tagline">Gruppo Ecologico Selvino Aviatico.<br>Altopiano di Selvino e Aviatico (BG).</p>
     </div>
-    <div class="footer-bottom">
-      <p>© 2025 Gruppo Ecologico Selvino Aviatico</p>
-      <p><a href="/gesa/">← Home</a></p>
+    <div>
+      <h3 class="footer-heading">Contrade</h3>
+      <ul class="footer-links">
+        <li><a href="/gesa/contrade/#brancane">Brancane</a></li>
+        <li><a href="/gesa/contrade/#quatri">Quatrì</a></li>
+        <li><a href="/gesa/contrade/#schene">Schene</a></li>
+        <li><a href="/gesa/contrade/#sort">Sort o Ca di Roc</a></li>
+        <li><a href="/gesa/contrade/#tes">Tes</a></li>
+        <li><a href="/gesa/contrade/#tiru">Tirù</a></li>
+        <li><a href="/gesa/contrade/#tunu">Tunù</a></li>
+        <li><a href="/gesa/contrade/#ulia">Ulia</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer-heading">Sezioni</h3>
+      <ul class="footer-links">
+        <li><a href="/gesa/sentieri/">Sentieri ad Anello</a></li>
+        <li><a href="/gesa/palestra/">Palestra Arrampicata</a></li>
+      </ul>
     </div>
   </div>
-</footer>
+  <div class="footer-bottom">
+    <p>© 2025 Gruppo Ecologico Selvino Aviatico</p>
+    <p><a href="/gesa/">← Home</a></p>
+  </div>
+</div></footer>
 
 <script src="/gesa/assets/js/main.js"></script>
 </body>
