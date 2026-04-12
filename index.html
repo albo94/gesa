@@ -94,21 +94,10 @@
       </div>
     </div>
     <div class="hero-photo">
-      <img src="/gesa/assets/img/panorama-selvino.jpg" alt="Panorama di Selvino e l'Altopiano" class="hero-photo-img">
+      <img src="/gesa/assets/img/selvino-statica.jpg" alt="Panorama di Selvino e l'Altopiano" class="hero-photo-img">
     </div>
   </div>
 </section>
-
-<!-- ═══════════════ PHOTO CAROUSEL ═══════════════ -->
-<div class="photo-carousel" aria-label="Foto dell'Altopiano">
-  <div class="carousel-track" id="carouselTrack">
-    <div class="carousel-slide"><img src="/gesa/assets/img/panorama-selvino.jpg" alt="Panorama di Selvino e l'Altopiano" loading="eager"></div>
-    <div class="carousel-slide"><img src="/gesa/assets/img/sitogesa_1.jpg" alt="Veduta sull'Altopiano di Selvino Aviatico" loading="lazy"></div>
-  </div>
-  <button class="carousel-btn carousel-prev" aria-label="Precedente">&#8249;</button>
-  <button class="carousel-btn carousel-next" aria-label="Successiva">&#8250;</button>
-  <div class="carousel-dots" id="carouselDots"></div>
-</div>
 
 <!-- ═══════════════ SEZIONI PRINCIPALI ═══════════════ -->
 <section class="section">
@@ -318,32 +307,5 @@
 </footer>
 
 <script src="/gesa/assets/js/main.js"></script>
-<script>
-(function(){
-  var track = document.getElementById('carouselTrack');
-  var dotsEl = document.getElementById('carouselDots');
-  if (!track) return;
-  var slides = track.querySelectorAll('.carousel-slide');
-  var total = slides.length;
-  var cur = 0;
-  // Create dots
-  slides.forEach(function(_,i){
-    var d = document.createElement('button');
-    d.className = 'carousel-dot' + (i===0?' active':'');
-    d.setAttribute('aria-label','Slide '+(i+1));
-    d.addEventListener('click', function(){ go(i); });
-    dotsEl.appendChild(d);
-  });
-  function go(n){
-    cur = (n + total) % total;
-    track.style.transform = 'translateX(-'+cur*100+'%)';
-    dotsEl.querySelectorAll('.carousel-dot').forEach(function(d,i){ d.classList.toggle('active',i===cur); });
-  }
-  document.querySelector('.carousel-prev').addEventListener('click', function(){ go(cur-1); });
-  document.querySelector('.carousel-next').addEventListener('click', function(){ go(cur+1); });
-  // Auto-play
-  setInterval(function(){ go(cur+1); }, 5000);
-})();
-</script>
 </body>
 </html>
