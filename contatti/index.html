@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contatti – GESA Selvino</title>
+  <meta name="description" content="Contatti del Gruppo Ecologico Selvino Aviatico (GESA): recapiti telefonici e indirizzo della Palestra di Arrampicata di Selvino.">
+  <link rel="canonical" href="https://www.gruppoecologicoselvinoaviatico.it/contatti/">
+  <link rel="icon" href="/gesa/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/gesa/assets/css/style.css">
+  <style>
+    .contact-card {
+      background: var(--color-white);
+      border-radius: var(--r-lg);
+      box-shadow: var(--shadow);
+      padding: var(--sp-8);
+      margin-bottom: var(--sp-6);
+      display: flex;
+      align-items: center;
+      gap: var(--sp-6);
+    }
+    .contact-avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      flex-shrink: 0;
+    }
+    .contact-info h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin: 0 0 0.4rem;
+    }
+    .contact-info a {
+      font-size: 1.05rem;
+      color: var(--color-primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+    .map-section {
+      background: var(--color-white);
+      border-radius: var(--r-lg);
+      box-shadow: var(--shadow);
+      padding: var(--sp-8);
+      margin-bottom: var(--sp-6);
+    }
+    .map-section h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin: 0 0 0.5rem;
+    }
+    .map-address {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+      margin: 0 0 var(--sp-5);
+    }
+    @media (max-width: 480px) {
+      .contact-card {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <div class="container header-inner">
+    <a href="/gesa/" class="logo"><img src="/gesa/assets/img/logo-gesa.png" alt="Logo GESA" class="logo-img"><div class="logo-text"><span class="logo-title">GESA</span><span class="logo-sub">Selvino · Aviatico</span></div></a>
+    <nav class="nav-desktop"><a href="/gesa/">Home</a><a href="/gesa/sentieri/">Sentieri</a><a href="/gesa/palestra/">Palestra</a><a href="/gesa/contrade/">Contrade</a><a href="/gesa/contatti/">Contatti</a></nav>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMobile" aria-label="Apri menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="nav-mobile" id="navMobile">
+  <a href="/gesa/"><span class="nav-icon">🏠</span> Home</a>
+  <a href="/gesa/sentieri/"><span class="nav-icon">🥾</span> Sentieri ad Anello</a>
+  <a href="/gesa/palestra/"><span class="nav-icon">🧗</span> Palestra</a>
+  <a href="/gesa/contrade/"><span class="nav-icon">🏘️</span> Contrade</a>
+  <a href="/gesa/contatti/"><span class="nav-icon">📞</span> Contatti</a>
+</nav>
+
+<section class="page-hero">
+  <div class="container page-hero-content">
+    <h1>Contatti</h1>
+  </div>
+</section>
+
+<section class="trail-content">
+  <div class="container" style="max-width:760px;">
+
+    <div class="contact-card reveal">
+      <div class="contact-avatar">👤</div>
+      <div class="contact-info">
+        <h3>Massimo Grigis</h3>
+        <a href="tel:+393355372168">335 537 2168</a>
+      </div>
+    </div>
+
+    <div class="map-section reveal">
+      <h2>🧗 Palestra di Arrampicata</h2>
+      <p class="map-address">Piazzale Chiesa 6, Selvino (BG)</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.5!2d9.7745!3d45.7916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4781565ecb9a7f91%3A0x1234!2sPiazzale+Chiesa+6%2C+24020+Selvino+BG!5e0!3m2!1sit!2sit!4v1" width="100%" height="400" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-logo"><a href="/gesa/" class="logo"><img src="/gesa/assets/img/logo-gesa.png" alt="Logo GESA" class="logo-img"><div class="logo-text"><span class="logo-title">GESA</span><span class="logo-sub">Selvino · Aviatico</span></div></a></div>
+      <div><h3 class="footer-heading">Esplora</h3><ul class="footer-links"><li><a href="/gesa/sentieri/">Sentieri</a></li><li><a href="/gesa/palestra/">Palestra</a></li><li><a href="/gesa/contrade/">Contrade</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Gruppo Ecologico Selvino Aviatico</p></div>
+  </div>
+</footer>
+<script src="/gesa/assets/js/main.js"></script>
+</body>
+</html>

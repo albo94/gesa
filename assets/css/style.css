@@ -211,6 +211,23 @@ button { cursor: pointer; font-family: inherit; }
   min-height: 560px;
   display: flex; align-items: center;
 }
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-8);
+  align-items: center;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .hero-split { grid-template-columns: 1fr; }
+  .hero-photo { display: none; }
+}
+.hero-photo-img {
+  width: 100%; height: 380px;
+  object-fit: cover;
+  border-radius: var(--r-lg);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+}
 .hero-content {
   position: relative; z-index: 1;
   padding: var(--sp-20) 0 var(--sp-16);
@@ -415,13 +432,9 @@ button { cursor: pointer; font-family: inherit; }
    TRAIL DETAIL PAGE
    ======================================== */
 .page-hero {
-  background: linear-gradient(145deg, #3d2000 0%, #1b563f 60%, #2d6e1a 100%);
+  background: #3d2000;
   color: white; padding: var(--sp-12) 0 var(--sp-10);
   position: relative; overflow: hidden;
-}
-.page-hero::after {
-  content: ''; position: absolute; inset: 0; pointer-events: none;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 240' preserveAspectRatio='xMidYMax slice'%3E%3Cpath fill='rgba(0,0,0,0.15)' d='M0 120 L200 80 L400 100 L600 50 L800 75 L1000 30 L1200 55 L1440 20 L1440 240 L0 240Z'/%3E%3C/svg%3E") no-repeat bottom/cover;
 }
 .page-hero-content { position: relative; z-index: 1; }
 
