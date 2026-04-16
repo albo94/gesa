@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Calchera di Serina – Curiosità · GESA Selvino Aviatico</title>
+  <meta name="description" content="La Calchera di Serina: il forno storico per la produzione della calce nelle Prealpi Orobiche. Storia, costruzione e funzionamento, restaurato dal GESA.">
+  <link rel="canonical" href="https://www.gruppoecologicoselvinoaviatico.it/curiosita/calchera/">
+  <meta property="og:title"       content="La Calchera di Serina – GESA">
+  <meta property="og:description" content="Il forno storico per la cottura della pietra calcarea nelle Prealpi Orobiche. Restaurato dal GESA con CAI Valserina, Alpini e Cacciatori di Selvino.">
+  <meta property="og:url"         content="https://www.gruppoecologicoselvinoaviatico.it/curiosita/calchera/">
+  <link rel="icon" href="/gesa/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/gesa/assets/css/style.css">
+  <style>
+    .curiosita-content h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      margin-top: var(--sp-8);
+      margin-bottom: var(--sp-3);
+      padding-bottom: var(--sp-2);
+      border-bottom: 2px solid var(--color-border);
+    }
+    .curiosita-content p {
+      margin-bottom: var(--sp-4);
+      color: var(--color-text);
+    }
+    .curiosita-content ul {
+      list-style: disc;
+      padding-left: var(--sp-6);
+      margin-bottom: var(--sp-4);
+    }
+    .curiosita-content ul li {
+      margin-bottom: var(--sp-2);
+      color: var(--color-text);
+    }
+    .curiosita-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--sp-8);
+      align-items: start;
+    }
+    @media (min-width: 900px) {
+      .curiosita-layout {
+        grid-template-columns: 1fr 320px;
+      }
+    }
+    .curiosita-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-4);
+    }
+    .fact-card {
+      background: var(--color-white);
+      border-radius: var(--r-lg);
+      padding: var(--sp-5) var(--sp-6);
+      box-shadow: var(--shadow);
+      border-left: 4px solid var(--color-primary);
+    }
+    .fact-card h4 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-text-muted);
+      margin-bottom: var(--sp-2);
+    }
+    .fact-card p {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin: 0;
+    }
+    .credits-box {
+      background: var(--color-surface-2);
+      border-radius: var(--r-lg);
+      padding: var(--sp-5) var(--sp-6);
+      border: 1px solid var(--color-border);
+    }
+    .credits-box h4 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-text-muted);
+      margin-bottom: var(--sp-3);
+    }
+    .credits-box ul {
+      list-style: none;
+      padding: 0;
+    }
+    .credits-box ul li {
+      font-size: 0.9rem;
+      color: var(--color-text);
+      padding: var(--sp-1) 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .credits-box ul li:last-child { border-bottom: none; }
+    .lang-toggle {
+      display: flex;
+      gap: var(--sp-2);
+      margin-bottom: var(--sp-6);
+    }
+    .lang-btn {
+      padding: var(--sp-2) var(--sp-4);
+      border-radius: var(--r-full);
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 2px solid var(--color-border);
+      background: var(--color-white);
+      color: var(--color-text-muted);
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .lang-btn.active,
+    .lang-btn:hover {
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+      color: var(--color-white);
+    }
+    .lang-content { display: none; }
+    .lang-content.visible { display: block; }
+  </style>
+</head>
+<body>
+
+<header class="site-header"><div class="container header-inner">
+  <a href="/gesa/" class="logo"><img src="/gesa/assets/img/logo-gesa.png" alt="Logo GESA" class="logo-img"><div class="logo-text"><span class="logo-title">GESA</span><span class="logo-sub">Selvino · Aviatico</span></div></a>
+  <nav class="nav-desktop"><a href="/gesa/">Home</a><a href="/gesa/sentieri/">Sentieri</a><a href="/gesa/palestra/">Palestra</a><a href="/gesa/contrade/">Contrade</a><a href="/gesa/curiosita/" class="active">Curiosità</a><a href="/gesa/contatti/">Contatti</a></nav>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMobile" aria-label="Apri menu"><span></span><span></span><span></span></button>
+</div></header>
+<nav class="nav-mobile" id="navMobile">
+  <a href="/gesa/"><span class="nav-icon">🏠</span> Home</a>
+  <a href="/gesa/sentieri/"><span class="nav-icon">🥾</span> Sentieri ad Anello</a>
+  <a href="/gesa/palestra/"><span class="nav-icon">🧗</span> Palestra di Arrampicata</a>
+  <a href="/gesa/contrade/"><span class="nav-icon">🏘️</span> Contrade</a>
+  <a href="/gesa/curiosita/"><span class="nav-icon">🏺</span> Curiosità</a>
+  <a href="/gesa/contatti/"><span class="nav-icon">📞</span> Contatti</a>
+</nav>
+
+<!-- Hero -->
+<section class="page-hero">
+  <div class="container page-hero-content">
+    <nav class="breadcrumb">
+      <a href="/gesa/">Home</a><span class="sep">›</span>
+      <a href="/gesa/curiosita/">Curiosità</a><span class="sep">›</span>
+      <span>La Calchera</span>
+    </nav>
+    <div class="hero-badge">🪨 Manufatto storico · Serina (BG)</div>
+    <h1>La Calchera</h1>
+    <div class="hero-meta-pills">
+      <span class="meta-pill">⏱️ Cottura: 5–7 giorni</span>
+      <span class="meta-pill">👷 4–5 persone</span>
+      <span class="meta-pill">📐 Diametro: 3–4 m</span>
+      <span class="meta-pill">🌍 IT · EN</span>
+    </div>
+  </div>
+</section>
+
+<!-- Contenuto principale -->
+<section class="section">
+  <div class="container">
+    <div class="curiosita-layout">
+
+      <!-- Testo principale -->
+      <div>
+        <!-- Toggle lingua -->
+        <div class="lang-toggle" role="group" aria-label="Seleziona lingua">
+          <button class="lang-btn active" onclick="switchLang('it', this)">🇮🇹 Italiano</button>
+          <button class="lang-btn" onclick="switchLang('en', this)">🇬🇧 English</button>
+        </div>
+
+        <!-- ITALIANO -->
+        <div class="lang-content visible curiosita-content" id="lang-it">
+
+          <h3>La Calce</h3>
+          <p>
+            Fino alla metà del secolo scorso la calce è stata utilizzata nelle vallate alpine per
+            vari impieghi. Tra questi il più comune è sicuramente l'impasto della calce con ghiaietto
+            arido al fine di ottenere una malta utile per l'edilizia. Veniva poi usata per imbiancare
+            le pareti interne ed esterne delle abitazioni e durante le epidemie anche per disinfettare
+            i locali.
+          </p>
+          <p>
+            La calce non esiste tal quale in natura ma è possibile ricavarla con la cottura di materiali
+            calcarei dei quali sono ricche le Prealpi Orobiche. In passato, nelle nostre valli, vennero
+            costruite numerose <strong>"calchere"</strong>, cioè i forni per cuocere la pietra calcarea
+            ed ottenere la calce. Ancora oggi se ne possono incontrare nei nostri boschi anche se,
+            purtroppo, abbandonate, sopraffatte dalla natura ed in buona parte ricoperte dalla vegetazione.
+          </p>
+
+          <h3>La Calchera</h3>
+          <p>
+            Già i romani, dai primi secoli a.C., avevano imparato e perfezionato la produzione e l'uso
+            della calce. Nel corso di 2 millenni questa attività è stata oggetto di poche modifiche.
+            Per ottimizzare il processo di cottura e per concentrare e non disperdere il calore prodotto
+            dalla combustione del carbone di legna, si giunse alla costruzione delle calchere.
+          </p>
+          <p>
+            La costruzione delle calchere è il risultato di un lungo processo di ottimizzazione nella
+            produzione della calce; la loro funzione è quella di ottimizzare il ciclo di cottura,
+            minimizzando la dispersione del calore prodotto mediante la combustione della legna e
+            soprattutto del carbone di legna.
+          </p>
+          <p>La loro ubicazione era condizionata da alcuni criteri generali che miravano alla vicinanza di luoghi:</p>
+          <ul>
+            <li>con disponibilità di pietre calcaree;</li>
+            <li>con disponibilità di combustibile; spesso non lontano dalle calchere veniva allestito il
+              <strong>"Poiat"</strong> dove si produceva carbone con legna in rami proveniente dai boschi
+              circostanti; nulla risultava sprecato: la legna più fine, non idonea a tale scopo, ordinata
+              in fascine, risultava utile per avviare la combustione del carbone nella calchera;</li>
+            <li>dove la calce prodotta venisse successivamente utilizzata per i diversi scopi (paesi,
+              nuclei abitati, cascine, stalle, alpeggi e manufatti vari).</li>
+          </ul>
+          <p>Insomma un tipico esempio di economia, come oggi si usa dire, <strong>a Km 0</strong>.</p>
+
+          <h3>Allestimento della Calchera</h3>
+          <p>
+            La calchera era caratterizzata da una struttura a botte a pianta in genere circolare, con
+            diametro e altezza di circa <strong>3–4 m</strong>; le sue pareti, in pietra del posto, erano
+            addossate ad un pendio, con l'obiettivo di minimizzare le dispersioni di calore.
+          </p>
+          <p>
+            L'interno del forno di cottura era composto da <strong>2 spazi sovrapposti</strong>: quello
+            inferiore fungeva da camera di combustione mentre lo spazio superiore conteneva le pietre da
+            portare a cottura; quelle più grosse venivano poste in basso, dove la temperatura era più
+            elevata, per poi ridursi di volume man mano che si saliva fino alla sommità. Questa veniva
+            chiusa con uno strato di malta che conteneva un foro per lo sfiato dei fumi e per regolare
+            nel contempo l'intensità della combustione.
+          </p>
+          <p>
+            Prima di introdurre il materiale da cuocere veniva allestita sopra il combustibile una specie
+            di volta con pietre calcaree, accostate l'una all'altra, che fungevano da sostegno per il
+            materiale caricato. Nella camera di combustione sottostante vi era un'apertura in basso che
+            serviva per introdurre il combustibile — legna in fascine e carbone di legna — e per togliere
+            man mano la cenere.
+          </p>
+          <p>
+            L'operazione di cottura durava <strong>5–7 giorni</strong> e coinvolgeva un gruppo di
+            <strong>4–5 persone</strong> che continuamente, giorno e notte, dovevano alimentare il fuoco
+            e controllare che tutto procedesse per il verso giusto. La cottura costituiva una operazione
+            estremamente delicata e complessa, il cui buon esito non era per nulla scontato; fondamentale
+            era la perizia degli operatori. Vi sono testimonianze che attestano l'usanza di
+            <em>benedire la fornace</em> prima di accendere il fuoco e di procedere con la cottura.
+          </p>
+
+        </div><!-- /lang-it -->
+
+        <!-- ENGLISH -->
+        <div class="lang-content curiosita-content" id="lang-en">
+
+          <h3>The Lime</h3>
+          <p>
+            Until the middle of the last century, lime was used in the Alpine valleys for various purposes.
+            Of these, the most common is certainly lime dough with arid gravel in order to obtain a mortar
+            useful for construction. It was then used to whiten the interior and exterior walls of houses
+            and during epidemics also to disinfect the premises.
+          </p>
+          <p>
+            Lime does not exist as such in nature, but it is possible to make it with the firing of
+            calcareous materials of which the Orobie mountains are rich. In the past, in our valleys,
+            numerous <strong>lime kilns</strong> were built — that is to say the kilns for firing the
+            limestone and obtaining the lime. Even today, they can be found in our woods, although,
+            unfortunately, abandoned, overwhelmed by nature, and largely covered by vegetation.
+          </p>
+
+          <h3>The Lime Kiln</h3>
+          <p>
+            Already the Romans, from the early centuries B.C., had learned and perfected the production
+            and use of lime. Over the course of 2 millennia this activity has been the subject of few
+            changes. In order to optimize the firing process and to concentrate and not disperse the heat
+            produced by burning charcoal, the lime kiln was built.
+          </p>
+          <p>
+            The construction of lime kilns is the result of a long process of optimizing the production
+            of lime. Their purpose is to optimize the heating cycle, by minimizing the dissipation of heat
+            produced by burning wood and, above all, charcoal.
+          </p>
+          <p>Their location was subject to some general criteria aimed at the proximity of places:</p>
+          <ul>
+            <li>the limestone availability;</li>
+            <li>the availability of fuel; often not far from the lime kilns was set up the
+              <strong>"Poiat"</strong> where coal was produced with wood from the surrounding woods;
+              nothing was wasted — the finer wood, not suitable for charcoal, ordered in bundles, was
+              useful for starting the burning of coal in the lime kiln;</li>
+            <li>where the lime produced was subsequently used for the various purposes (towns, villages,
+              farmhouses, stables, mountain pastures and various artifacts).</li>
+          </ul>
+          <p>A typical example of economy, as we call it nowadays, <strong>at 0 km</strong>.</p>
+
+          <h3>Set-up of the Lime Kiln</h3>
+          <p>
+            The lime kiln was characterized by a barrel structure with a generally circular plan, with a
+            <strong>diameter and height of about 3–4 m</strong>; its walls, made of local stone, were
+            leaning against a slope, with the aim of minimizing heat dispersion.
+          </p>
+          <p>
+            The interior of the firing kiln was composed of <strong>2 superimposed spaces</strong>: the
+            lower one served as a combustion chamber while the upper space contained the stones to be
+            fired; the larger ones were placed at the bottom, where the temperature was higher, gradually
+            reducing in size towards the top. The top was closed with a layer of mortar containing a hole
+            for venting smoke and for regulating the intensity of combustion.
+          </p>
+          <p>
+            Before introducing the material to be fired, a kind of vault was set up above the fuel with
+            calcareous stones placed next to each other, which acted as a support for the loaded material.
+            In the combustion chamber below there was an opening at the bottom which was used to introduce
+            the fuel — wood in bundles and charcoal — and to remove the ash.
+          </p>
+          <p>
+            The firing operation lasted <strong>5–7 days</strong> and involved a group of
+            <strong>4–5 people</strong> who continuously, day and night, had to feed the fire and ensure
+            that everything was proceeding correctly. The firing was an extremely delicate and complex
+            operation, the success of which was by no means self-evident; the expert skills of the
+            operators were crucial. There are testimonies of the custom of <em>blessing the furnace</em>
+            before starting the fire and proceeding with the calcination process.
+          </p>
+
+        </div><!-- /lang-en -->
+      </div><!-- /main -->
+
+      <!-- Sidebar -->
+      <aside class="curiosita-sidebar reveal">
+
+        <div class="fact-card">
+          <h4>Struttura</h4>
+          <p>Botte circolare in pietra locale</p>
+        </div>
+
+        <div class="fact-card">
+          <h4>Dimensioni</h4>
+          <p>Diametro e altezza 3–4 m</p>
+        </div>
+
+        <div class="fact-card">
+          <h4>Durata cottura</h4>
+          <p>5–7 giorni continui</p>
+        </div>
+
+        <div class="fact-card">
+          <h4>Personale</h4>
+          <p>4–5 persone (giorno e notte)</p>
+        </div>
+
+        <div class="fact-card">
+          <h4>Combustibile</h4>
+          <p>Legna in fascine + carbone di legna (dal Poiat)</p>
+        </div>
+
+        <div class="fact-card">
+          <h4>Prodotto</h4>
+          <p>Calce viva — malta, imbiancatura, disinfezione</p>
+        </div>
+
+        <div class="credits-box">
+          <h4>Restauro e tabelle</h4>
+          <ul>
+            <li>Gruppo GESA</li>
+            <li>CAI Valserina</li>
+            <li>Gruppo Alpini Selvino</li>
+            <li>Gruppo Cacciatori Selvino</li>
+          </ul>
+        </div>
+
+        <a href="/gesa/curiosita/poiat/" class="btn btn-outline" style="text-align:center;">
+          🌲 Scopri il Poiat →
+        </a>
+
+      </aside>
+
+    </div><!-- /curiosita-layout -->
+  </div>
+</section>
+
+<div class="cta-banner">
+  <div class="container">
+    <h2>🥾 Esplora i sentieri</h2>
+    <p>La calchera si trova lungo i sentieri dell'Altopiano. Parti alla scoperta del territorio.</p>
+    <a href="/gesa/sentieri/" class="btn btn-primary btn-lg">Tutti i sentieri</a>
+  </div>
+</div>
+
+<footer class="site-footer"><div class="container">
+  <div class="footer-grid">
+    <div class="footer-logo">
+      <a href="/gesa/" class="logo"><img src="/gesa/assets/img/logo-gesa.png" alt="Logo GESA" class="logo-img"><div class="logo-text"><span class="logo-title">GESA</span><span class="logo-sub">Selvino · Aviatico</span></div></a>
+      <p class="footer-tagline">Gruppo Ecologico Selvino Aviatico.<br>Altopiano di Selvino e Aviatico (BG).</p>
+    </div>
+    <div>
+      <h3 class="footer-heading">Curiosità</h3>
+      <ul class="footer-links">
+        <li><a href="/gesa/curiosita/calchera/">La Calchera</a></li>
+        <li><a href="/gesa/curiosita/poiat/">Il Poiat</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer-heading">Sezioni</h3>
+      <ul class="footer-links">
+        <li><a href="/gesa/sentieri/">Sentieri ad Anello</a></li>
+        <li><a href="/gesa/palestra/">Palestra Arrampicata</a></li>
+        <li><a href="/gesa/contrade/">Contrade</a></li>
+        <li><a href="/gesa/curiosita/">Curiosità</a></li>
+        <li><a href="/gesa/contatti/">Contatti</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Gruppo Ecologico Selvino Aviatico</p>
+    <p><a href="/gesa/curiosita/">← Curiosità</a></p>
+  </div>
+</div></footer>
+
+<script src="/gesa/assets/js/main.js"></script>
+<script>
+function switchLang(lang, btn) {
+  document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('visible'));
+  document.getElementById('lang-' + lang).classList.add('visible');
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>

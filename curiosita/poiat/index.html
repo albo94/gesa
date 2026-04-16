@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Il Poiat – La Carbonaia · Curiosità · GESA Selvino Aviatico</title>
+  <meta name="description" content="Il Poiat: la carbonaia tradizionale delle Prealpi Lombarde. Come si costruiva e si gestiva la cupola di legna per produrre carbone, restaurata dal GESA.">
+  <link rel="canonical" href="https://www.gruppoecologicoselvinoaviatico.it/curiosita/poiat/">
+  <meta property="og:title"       content="Il Poiat – La Carbonaia · GESA">
+  <meta property="og:description" content="La carbonaia tradizionale chiamata Poiat in dialetto lombardo: costruzione, funzionamento e ubicazione nelle Prealpi Orobiche.">
+  <meta property="og:url"         content="https://www.gruppoecologicoselvinoaviatico.it/curiosita/poiat/">
+  <link rel="icon" href="/gesa/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/gesa/assets/css/style.css">
+  <style>
+    .curiosita-content h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      margin-top: var(--sp-8);
+      margin-bottom: var(--sp-3);
+      padding-bottom: var(--sp-2);
+      border-bottom: 2px solid var(--color-border);
+    }
+    .curiosita-content p {
+      margin-bottom: var(--sp-4);
+      color: var(--color-text);
+    }
+    .curiosita-content ul {
+      list-style: disc;
+      padding-left: var(--sp-6);
+      margin-bottom: var(--sp-4);
+    }
+    .curiosita-content ul li {
+      margin-bottom: var(--sp-2);
+      color: var(--color-text);
+    }
+    .curiosita-content ol {
+      padding-left: var(--sp-6);
+      margin-bottom: var(--sp-4);
+    }
+    .curiosita-content ol li {
+      margin-bottom: var(--sp-2);
+      color: var(--color-text);
+    }
+    .curiosita-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--sp-8);
+      align-items: start;
+    }
+    @media (min-width: 900px) {
+      .curiosita-layout {
+        grid-template-columns: 1fr 320px;
+      }
+    }
+    .curiosita-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-4);
+    }
+    .fact-card {
+      background: var(--color-white);
+      border-radius: var(--r-lg);
+      padding: var(--sp-5) var(--sp-6);
+      box-shadow: var(--shadow);
+      border-left: 4px solid var(--color-primary);
+    }
+    .fact-card h4 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-text-muted);
+      margin-bottom: var(--sp-2);
+    }
+    .fact-card p {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin: 0;
+    }
+    .credits-box {
+      background: var(--color-surface-2);
+      border-radius: var(--r-lg);
+      padding: var(--sp-5) var(--sp-6);
+      border: 1px solid var(--color-border);
+    }
+    .credits-box h4 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-text-muted);
+      margin-bottom: var(--sp-3);
+    }
+    .credits-box ul {
+      list-style: none;
+      padding: 0;
+    }
+    .credits-box ul li {
+      font-size: 0.9rem;
+      color: var(--color-text);
+      padding: var(--sp-1) 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .credits-box ul li:last-child { border-bottom: none; }
+    .lang-toggle {
+      display: flex;
+      gap: var(--sp-2);
+      margin-bottom: var(--sp-6);
+    }
+    .lang-btn {
+      padding: var(--sp-2) var(--sp-4);
+      border-radius: var(--r-full);
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 2px solid var(--color-border);
+      background: var(--color-white);
+      color: var(--color-text-muted);
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .lang-btn.active,
+    .lang-btn:hover {
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+      color: var(--color-white);
+    }
+    .lang-content { display: none; }
+    .lang-content.visible { display: block; }
+    .process-steps {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-4);
+      margin: var(--sp-4) 0;
+    }
+    .process-step {
+      display: flex;
+      gap: var(--sp-4);
+      align-items: flex-start;
+    }
+    .step-num {
+      flex-shrink: 0;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background: var(--color-primary);
+      color: var(--color-white);
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .step-body h4 {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--color-primary-dark);
+      margin-bottom: var(--sp-1);
+    }
+    .step-body p { margin: 0; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+<header class="site-header"><div class="container header-inner">
+  <a href="/gesa/" class="logo"><img src="/gesa/assets/img/logo-gesa.png" alt="Logo GESA" class="logo-img"><div class="logo-text"><span class="logo-title">GESA</span><span class="logo-sub">Selvino · Aviatico</span></div></a>
+  <nav class="nav-desktop"><a href="/gesa/">Home</a><a href="/gesa/sentieri/">Sentieri</a><a href="/gesa/palestra/">Palestra</a><a href="/gesa/contrade/">Contrade</a><a href="/gesa/curiosita/" class="active">Curiosità</a><a href="/gesa/contatti/">Contatti</a></nav>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMobile" aria-label="Apri menu"><span></span><span></span><span></span></button>
+</div></header>
+<nav class="nav-mobile" id="navMobile">
+  <a href="/gesa/"><span class="nav-icon">🏠</span> Home</a>
+  <a href="/gesa/sentieri/"><span class="nav-icon">🥾</span> Sentieri ad Anello</a>
+  <a href="/gesa/palestra/"><span class="nav-icon">🧗</span> Palestra di Arrampicata</a>
+  <a href="/gesa/contrade/"><span class="nav-icon">🏘️</span> Contrade</a>
+  <a href="/gesa/curiosita/"><span class="nav-icon">🏺</span> Curiosità</a>
+  <a href="/gesa/contatti/"><span class="nav-icon">📞</span> Contatti</a>
+</nav>
+
+<!-- Hero -->
+<section class="page-hero">
+  <div class="container page-hero-content">
+    <nav class="breadcrumb">
+      <a href="/gesa/">Home</a><span class="sep">›</span>
+      <a href="/gesa/curiosita/">Curiosità</a><span class="sep">›</span>
+      <span>Il Poiat</span>
+    </nav>
+    <div class="hero-badge">🌲 Manufatto storico · Boschi dell'Altopiano</div>
+    <h1>Il Poiat</h1>
+    <div class="hero-meta-pills">
+      <span class="meta-pill">⏱️ Cottura: 7–10 giorni</span>
+      <span class="meta-pill">🌡️ Min. 300 °C</span>
+      <span class="meta-pill">📐 Diametro: 3–4 m</span>
+      <span class="meta-pill">🌍 IT · EN</span>
+    </div>
+  </div>
+</section>
+
+<!-- Contenuto principale -->
+<section class="section">
+  <div class="container">
+    <div class="curiosita-layout">
+
+      <!-- Testo principale -->
+      <div>
+        <!-- Toggle lingua -->
+        <div class="lang-toggle" role="group" aria-label="Seleziona lingua">
+          <button class="lang-btn active" onclick="switchLang('it', this)">🇮🇹 Italiano</button>
+          <button class="lang-btn" onclick="switchLang('en', this)">🇬🇧 English</button>
+        </div>
+
+        <!-- ITALIANO -->
+        <div class="lang-content visible curiosita-content" id="lang-it">
+
+          <h3>La produzione di carbone</h3>
+          <p>
+            La carbonaia, <strong>"Poiat"</strong> in dialetto lombardo, è un manufatto a forma di cupola,
+            costruita per ottenere carbone a partire dalla legna tagliata nei boschi cedui — boschi governati
+            appositamente per produrre legna da ardere o da carbone. Sulle Prealpi lombarde, i cedui più
+            diffusi sono di faggio.
+          </p>
+          <p>
+            Il principio chimico su cui si basa la produzione del carbone è quello della
+            <strong>combustione in ambiente povero di ossigeno</strong>, in modo da ottenere materiale
+            ad elevato potere calorico più leggero della legna, cosa che facilita anche i trasporti,
+            fatti una volta soprattutto con muli.
+          </p>
+          <p>
+            La carbonizzazione all'interno della carbonaia avviene ad una temperatura minima di
+            <strong>300 °C</strong>; la legna perde il 25–40% del proprio volume e l'80% del proprio peso.
+            La produzione di una carbonaia di medie dimensioni era di circa <strong>100 quintali di
+            carbone</strong>, per ottenere la quale occorrevano <strong>500 quintali di legna</strong>.
+          </p>
+          <p>
+            Da sempre il principale uso del carbone di legna è stato quello legato all'industria
+            metallurgica; per la lavorazione dei metalli occorre raggiungere elevate temperature, e il
+            carbone da legna ha un potere calorico più elevato rispetto alla legna:
+            <strong>6.500–7.500 cal/Kg</strong> contro le <strong>4.000 cal/Kg</strong> della legna.
+          </p>
+
+          <h3>Costruzione della carbonaia</h3>
+          <p>
+            I carbonai di solito lavoravano in coppia, ed erano veri e propri maestri di quest'arte
+            difficile; per la costruzione di una carbonaia impiegavano diversi giorni di lavoro,
+            soprattutto per trasportare la legna nelle vicinanze dell'aia carbonile.
+          </p>
+          <p>
+            Generalmente per costruire la carbonaia si individuavano luoghi abbastanza pianeggianti
+            all'interno del bosco, o venivano appositamente creati anche con muretti di sostegno: sono
+            le tipiche <strong>aie carbonili</strong> (<em>aral</em> o <em>ajal</em>), ancor oggi
+            caratterizzate dal terreno di colore nero.
+          </p>
+          <p>
+            Nel luogo prescelto, una volta ripulito il terreno dalla vegetazione, veniva anzitutto
+            piantato al centro dell'area un <strong>palo alto 2,5 m</strong> attorno al quale si
+            costruiva il <em>fornello</em>: un'incastellatura di legno a forma quadrata che sarebbe
+            diventata la camera di combustione. Attorno al castello venivano quindi posti con cura i
+            pezzi di legno da carbonizzare — i più grossi al centro, dove la temperatura è più elevata,
+            e via via i più sottili — in strati compatti fino a formare la tipica catasta
+            (<strong>3–4 m di diametro, 2–3 m di altezza</strong>). Infine si copriva la legna con uno
+            strato isolante di frasche o terriccio bagnato o felci, dello spessore di circa
+            <strong>10 cm</strong>, e si ostruiva l'apertura superiore del fornello con una zolla di terra.
+          </p>
+
+          <h3>Funzionamento della carbonaia</h3>
+
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="step-num">1</div>
+              <div class="step-body">
+                <h4>Accensione</h4>
+                <p>Si effettuava introducendo nel fornello dei ciocchi di legna accesa, fino a che la
+                combustione non si autoalimentava. Sulla catasta si saliva usando una scaletta ricavata
+                da un tronco curvo con tacche per i piedi.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="step-num">2</div>
+              <div class="step-body">
+                <h4>Cottura (7–10 giorni)</h4>
+                <p>La combustione veniva controllata giorno e notte. Nei primi 2 giorni la carbonizzazione
+                procedeva "alla cieca", senza aprire fori nella copertura. Poi, partendo dall'alto e
+                procedendo verso la base, si aprivano fori di sfiato per l'uscita del fumo e per
+                estendere la carbonizzazione a tutta la catasta.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="step-num">3</div>
+              <div class="step-body">
+                <h4>Segnale di fine cottura</h4>
+                <p>Il carbone era pronto quando il fumo che usciva dalla catasta passava dall'iniziale
+                <em>color cenere</em> ad un <em>color azzurrino</em>.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="step-num">4</div>
+              <div class="step-body">
+                <h4>Spegnimento ed estrazione</h4>
+                <p>Si spegneva tappando ogni apertura e si lasciava raffreddare per impedire che si
+                riaccendesse. Si procedeva poi togliendo il carbone con il rastrello e lasciandolo
+                raffreddare prima di metterlo nei sacchi per il trasporto.</p>
+              </div>
+            </div>
+          </div>
+
+          <h3>L'ubicazione</h3>
+          <p>
+            Tutte le carbonaie sono localizzate all'interno dei boschi cedui, a distanza abbastanza
+            regolare una dall'altra, lungo <strong>sentieri pianeggianti</strong> che le collegano per
+            facilitare il raggiungimento, le operazioni di preparazione e soprattutto il caricamento
+            dei sacchi sui muli per il trasporto.
+          </p>
+
+        </div><!-- /lang-it -->
+
+        <!-- ENGLISH -->
+        <div class="lang-content curiosita-content" id="lang-en">
+
+          <h3>The Charcoal Pile</h3>
+          <p>
+            The charcoal pile, <strong>"Poiat"</strong> in the Lombard dialect, was built in order to
+            obtain charcoal from wood felled in coppiced woods — woods managed specifically to produce
+            firewood or charcoal. On the Lombard Pre-Alps, beech coppices are the most common.
+          </p>
+          <p>
+            The chemical principle on which charcoal production is based is
+            <strong>combustion in an oxygen-poor environment</strong>, so as to obtain material with a
+            high energy content, lighter than wood, which also facilitated transport, formerly carried
+            out mainly by mules.
+          </p>
+          <p>
+            Carbonization inside the charcoal pile occurs at a minimum temperature of
+            <strong>300 °C</strong>; wood loses 25–40% of its volume and 80% of its weight. A medium-sized
+            charcoal pile produced about <strong>100 quintals of charcoal</strong>, requiring
+            <strong>500 quintals of wood</strong>.
+          </p>
+          <p>
+            The principal use of charcoal has always been connected to the metallurgical industry;
+            charcoal has a higher calorific value than wood:
+            <strong>6,500–7,500 cal/Kg</strong> against <strong>4,000 cal/Kg</strong> for wood.
+          </p>
+
+          <h3>Building the Charcoal Pile</h3>
+          <p>
+            The charcoal burners usually worked in pairs, and were true masters of this difficult art;
+            building a charcoal pile took several days of work, mainly to transport the wood near the
+            charcoal yard.
+          </p>
+          <p>
+            The typical dome-shaped pile was built on flat terrain or on specially created terraces with
+            low breast walls — the typical <strong>charcoal yards</strong> (<em>aral</em> or
+            <em>ajal</em>), still identifiable today by their black-coloured soil.
+          </p>
+          <p>
+            A <strong>2.5 m high pole</strong> was set in the middle of the cleared area and around it
+            was placed a square wooden frame — the <em>kiln</em> — which became the combustion chamber.
+            Wood was then carefully placed around it, largest pieces in the centre (where temperature
+            is highest) and progressively thinner ones towards the outside, forming a pile
+            (<strong>3–4 m diameter, 2–3 m high</strong>). Finally, the wood was covered with an
+            insulating layer of leafy branches, wet mould or ferns, about <strong>10 cm thick</strong>,
+            and the upper opening was blocked with a sod of earth.
+          </p>
+
+          <h3>Charcoal Pile Operation</h3>
+
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="step-num">1</div>
+              <div class="step-body">
+                <h4>Lighting</h4>
+                <p>Charcoal burners pushed blocks of lit wood into the kiln, until combustion proceeded
+                spontaneously. They climbed the pile using a ladder made from a curved trunk with notches
+                for the feet.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="step-num">2</div>
+              <div class="step-body">
+                <h4>Cooking period (7–10 days)</h4>
+                <p>Combustion had to be controlled both night and day. For the first 2 days the charring
+                proceeded "blindly", without opening holes in the covering. Then vent-holes were opened
+                from top to bottom to allow smoke to escape and extend the charring to the whole pile.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="step-num">3</div>
+              <div class="step-body">
+                <h4>Readiness signal</h4>
+                <p>The charcoal was ready when the smoke emerging from the pile turned from
+                <em>ash-coloured</em> to <em>bluish</em>.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="step-num">4</div>
+              <div class="step-body">
+                <h4>Extinguishing and extraction</h4>
+                <p>Combustion was stopped by plugging all the holes and left to cool to prevent
+                re-ignition. Charcoal was then raked out, left to cool and bagged for transport.</p>
+              </div>
+            </div>
+          </div>
+
+          <h3>Location</h3>
+          <p>
+            The charcoal piles are spaced regularly from each other within coppices, alongside
+            <strong>flat linking paths</strong> to facilitate their preparation and transport by mules.
+          </p>
+
+        </div><!-- /lang-en -->
+      </div><!-- /main -->
+
+      <!-- Sidebar -->
+      <aside class="curiosita-sidebar reveal">
+
+        <div class="fact-card">
+          <h4>Nome dialettale</h4>
+          <p>"Poiat" (lombardo)</p>
+        </div>
+
+        <div class="fact-card">
+          <h4>Forma</h4>
+          <p>Cupola — 3–4 m diametro, 2–3 m altezza</p>
+        </div>
+
+        <div class="fact-card">
+          <h4>Temperatura</h4>
+          <p>Minimo 300 °C</p>
+        </div>
+
+        <div class="fact-card">
+          <h4>Durata cottura</h4>
+          <p>7–10 giorni continui</p>
+        </div>
+
+        <div class="fact-card">
+          <h4>Resa</h4>
+          <p>100 q di carbone da 500 q di legna</p>
+        </div>
+
+        <div class="fact-card">
+          <h4>Potere calorico</h4>
+          <p>6.500–7.500 cal/Kg (legna: 4.000)</p>
+        </div>
+
+        <div class="fact-card">
+          <h4>Bosco utilizzato</h4>
+          <p>Cedui di faggio — gestiti appositamente</p>
+        </div>
+
+        <div class="credits-box">
+          <h4>Restauro e tabelle</h4>
+          <ul>
+            <li>Gruppo GESA</li>
+            <li>CAI Valserina</li>
+            <li>Gruppo Alpini Selvino</li>
+            <li>Gruppo Cacciatori Selvino</li>
+          </ul>
+        </div>
+
+        <a href="/gesa/curiosita/calchera/" class="btn btn-outline" style="text-align:center;">
+          🪨 Scopri la Calchera →
+        </a>
+
+      </aside>
+
+    </div><!-- /curiosita-layout -->
+  </div>
+</section>
+
+<div class="cta-banner">
+  <div class="container">
+    <h2>🥾 Esplora i sentieri</h2>
+    <p>Le aie carbonili si trovano lungo i sentieri dell'Altopiano. Parti alla scoperta del territorio.</p>
+    <a href="/gesa/sentieri/" class="btn btn-primary btn-lg">Tutti i sentieri</a>
+  </div>
+</div>
+
+<footer class="site-footer"><div class="container">
+  <div class="footer-grid">
+    <div class="footer-logo">
+      <a href="/gesa/" class="logo"><img src="/gesa/assets/img/logo-gesa.png" alt="Logo GESA" class="logo-img"><div class="logo-text"><span class="logo-title">GESA</span><span class="logo-sub">Selvino · Aviatico</span></div></a>
+      <p class="footer-tagline">Gruppo Ecologico Selvino Aviatico.<br>Altopiano di Selvino e Aviatico (BG).</p>
+    </div>
+    <div>
+      <h3 class="footer-heading">Curiosità</h3>
+      <ul class="footer-links">
+        <li><a href="/gesa/curiosita/calchera/">La Calchera</a></li>
+        <li><a href="/gesa/curiosita/poiat/">Il Poiat</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer-heading">Sezioni</h3>
+      <ul class="footer-links">
+        <li><a href="/gesa/sentieri/">Sentieri ad Anello</a></li>
+        <li><a href="/gesa/palestra/">Palestra Arrampicata</a></li>
+        <li><a href="/gesa/contrade/">Contrade</a></li>
+        <li><a href="/gesa/curiosita/">Curiosità</a></li>
+        <li><a href="/gesa/contatti/">Contatti</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Gruppo Ecologico Selvino Aviatico</p>
+    <p><a href="/gesa/curiosita/">← Curiosità</a></p>
+  </div>
+</div></footer>
+
+<script src="/gesa/assets/js/main.js"></script>
+<script>
+function switchLang(lang, btn) {
+  document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('visible'));
+  document.getElementById('lang-' + lang).classList.add('visible');
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
