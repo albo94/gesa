@@ -22,29 +22,34 @@ nuovo-sito/                  ← root del sito
 ├── index.html               ← Homepage
 ├── favicon.ico              ← Favicon dal logo GESA reale (16/32/48px)
 ├── favicon.png              ← Favicon PNG 192×192 per Apple touch icon
-├── favicon.svg              ← Favicon SVG legacy (non più in uso nei link HTML)
-├── favicon.svg              ← SVG approssimativo (mantenuto ma non referenziato)
+├── favicon.svg              ← SVG approssimativo (non referenziato nei link)
 ├── robots.txt
 ├── sitemap.xml              ← Aggiornare quando si aggiungono nuove pagine
 ├── CNAME                    ← Vuoto (disabilitato)
 ├── .nojekyll                ← Disabilita Jekyll su GitHub Pages
 ├── CLAUDE.md                ← Questo file
 ├── assets/
-│   ├── css/style.css        ← Foglio di stile unico (806+ righe)
-│   ├── js/main.js           ← JavaScript vanilla (79 righe)
+│   ├── css/style.css        ← Foglio di stile unico
+│   ├── js/main.js           ← JavaScript vanilla
 │   └── img/
-│       ├── logo-gesa.png    ← Logo ufficiale GESA (1330×1177 RGBA)
-│       ├── contrade/        ← 8 PNG poster contrade
-│       └── ...              ← Foto varie (palestra, panorami, QR)
+│       ├── logo-gesa.png        ← Logo ufficiale GESA (1330×1177 RGBA)
+│       ├── mappa-contrade.jpeg  ← Mappa geografica delle 8 contrade
+│       ├── loghi/               ← Loghi partner/collaboratori
+│       │   ├── logo-cai.png         ← CAI Valserina
+│       │   ├── logo-alpini.jpg      ← Gruppo Alpini Selvino
+│       │   └── logo-cacciatori.jpg  ← Sezione Cacciatori Selvino
+│       ├── contrade/            ← 8 PNG poster contrade (originali)
+│       ├── contrade2/           ← 8 JPG foto ritagliate per la versione narrativa
+│       └── ...                  ← Foto varie (palestra, panorami, QR)
 ├── sentieri/
 │   ├── index.html           ← Elenco 12 sentieri
 │   └── a001/ … a012/        ← Pagine dettaglio sentieri (ArcGIS embed)
 ├── palestra/
 │   └── index.html
 ├── contrade/
-│   └── index.html           ← 8 contrade con poster PNG (versione originale)
-├── contrade2/               ← NUOVA SEZIONE (aprile 2026) — versione narrativa
-│   ├── index.html           ← Hub con 8 card + foto storiche
+│   └── index.html           ← Versione poster (nascosta, link solo da contrade2)
+├── contrade2/               ← Sezione Contrade PRIMARIA (nav + homepage)
+│   ├── index.html           ← Hub con mappa + 8 card con foto storiche
 │   ├── brancane/index.html
 │   ├── quatri/index.html
 │   ├── schene/index.html
@@ -53,8 +58,8 @@ nuovo-sito/                  ← root del sito
 │   ├── tiru/index.html
 │   ├── tunu/index.html
 │   └── ulia/index.html
-├── curiosita/               ← NUOVA SEZIONE (aprile 2026)
-│   ├── index.html           ← Hub curiosità
+├── curiosita/
+│   ├── index.html           ← Hub curiosità (con loghi partner reali)
 │   ├── calchera/
 │   │   └── index.html       ← La Calchera di Serina (IT + EN)
 │   └── poiat/
@@ -65,6 +70,19 @@ nuovo-sito/                  ← root del sito
 │   ├── a001/ … a012/        ← Redirect QR sentieri
 │   └── p001/ … p005/        ← Redirect QR palestra
 └── 404.html
+```
+
+### Cartella sorgente (fuori da nuovo-sito/)
+
+```
+sitoweb gesa/
+├── nuovo-sito/              ← Sito web (vedi sopra)
+├── gen_contrade2.py         ← Script Python per rigenerare le 9 pagine contrade2
+├── curiosità/               ← File .pub sorgente per testi Calchera e Poiat
+├── loghi_sito_gesa/         ← Raccolta loghi e materiali grafici vari
+├── archivio/                ← Materiale storico di riferimento
+├── foto/                    ← Foto originali ad alta risoluzione
+└── riferimenti/             ← Documenti di riferimento
 ```
 
 ---
@@ -235,7 +253,7 @@ Stessa struttura di 8 contrade ma con pagine individuali e testo HTML
 - **Calchera:** forno per cottura pietra calcarea (IT+EN, sidebar dati tecnici)
 - **Poiat:** carbonaia in dialetto lombardo (IT+EN, sidebar dati tecnici)
 - Testo fonte: pannelli informativi originali (file `.pub` in `../curiosità/`)
-- Crediti: GESA, CAI Valserina, Gruppo Alpini Selvino, Gruppo Cacciatori Selvino
+- Crediti hub page: loghi reali in `assets/img/loghi/` (CAI, Alpini, Cacciatori) — sostituiscono le emoji nelle feature-card
 
 ---
 
@@ -285,4 +303,4 @@ for fpath in html_files:
 
 ---
 
-*Ultimo aggiornamento: aprile 2026 — Contrade2 promossa a sezione primaria (nav + homepage puntano a `/contrade2/`), vecchia versione poster nascosta, mappa contrade integrata in `contrade2/index.html`.*
+*Ultimo aggiornamento: aprile 2026 — loghi reali (CAI, Alpini, Cacciatori) integrati in `curiosita/index.html`, cartella `assets/img/loghi/` creata, struttura cartelle documentata.*
