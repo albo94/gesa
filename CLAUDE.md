@@ -42,7 +42,17 @@ nuovo-sito/                  ← root del sito
 ├── palestra/
 │   └── index.html
 ├── contrade/
-│   └── index.html           ← 8 contrade con poster PNG
+│   └── index.html           ← 8 contrade con poster PNG (versione originale)
+├── contrade2/               ← NUOVA SEZIONE (aprile 2026) — versione narrativa
+│   ├── index.html           ← Hub con 8 card + foto storiche
+│   ├── brancane/index.html
+│   ├── quatri/index.html
+│   ├── schene/index.html
+│   ├── sort/index.html
+│   ├── tes/index.html
+│   ├── tiru/index.html
+│   ├── tunu/index.html
+│   └── ulia/index.html
 ├── curiosita/               ← NUOVA SEZIONE (aprile 2026)
 │   ├── index.html           ← Hub curiosità
 │   ├── calchera/
@@ -206,8 +216,19 @@ Impegnativo: #dc2626 (rosso)
 - Sede: Oratorio di Selvino
 - Tariffe: Adulti 3€, Under 18 2€, Soci GESA gratis
 
-### Contrade (8 totali)
+### Contrade — versione poster (originale, `/contrade/`)
 Brancane, Quatrì, Schene, Sort o Ca di Roc, Tes, Tirù, Tunù, Ulia
+- Ogni contrada: card con immagine PNG poster full-size e link "Ingrandisci"
+- Fonte: poster PNG in `assets/img/contrade/`
+
+### Contrade2 — versione narrativa (`/contrade2/`, aprile 2026)
+Stessa struttura di 8 contrade ma con pagine individuali e testo HTML
+- **Fonte testi**: estratti visivamente dai poster PNG originali (via lettura immagine AI)
+- **Foto**: ritagliate dai poster con Pillow, salvate in `assets/img/contrade2/*-foto.jpg`
+- **Componenti CSS** specifici: `.c2-layout`, `.c2-photo-wrap`, `.c2-card-grid`, `.c2-card`, `.fact-card`, `.ricerca-box`
+- **Contenuto per contrada**: foto storica + testo HTML + sidebar fatti + link al poster originale + nav prev/next
+- Contrade con testo minimo: Tes (nome sconosciuto, "?????"), Tirù (solo mappa aerea + "ora solo villeggianti")
+- Genera pagine con: `../gen_contrade2.py` (script Python nella root del progetto)
 
 ### Curiosità (aggiunto aprile 2026)
 - **Calchera:** forno per cottura pietra calcarea (IT+EN, sidebar dati tecnici)
@@ -263,4 +284,4 @@ for fpath in html_files:
 
 ---
 
-*Ultimo aggiornamento: aprile 2026 — aggiunta sezione Curiosità (Calchera e Poiat), favicon aggiornata con logo reale, navigazione estesa.*
+*Ultimo aggiornamento: aprile 2026 — aggiunta sezione Contrade2 (versione narrativa con foto ritagliate e pagine individuali per le 8 contrade), sezione Curiosità (Calchera e Poiat), favicon aggiornata con logo reale, navigazione estesa.*
