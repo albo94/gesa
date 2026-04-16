@@ -146,7 +146,7 @@ Impegnativo: #dc2626 (rosso)
   <a href="/gesa/">Home</a>
   <a href="/gesa/sentieri/">Sentieri</a>
   <a href="/gesa/palestra/">Palestra</a>
-  <a href="/gesa/contrade/">Contrade</a>
+  <a href="/gesa/contrade2/">Contrade</a>
   <a href="/gesa/curiosita/">Curiosità</a>
   <a href="/gesa/contatti/">Contatti</a>
 </nav>
@@ -159,7 +159,7 @@ Impegnativo: #dc2626 (rosso)
   <a href="/gesa/"><span class="nav-icon">🏠</span> Home</a>
   <a href="/gesa/sentieri/"><span class="nav-icon">🥾</span> Sentieri ad Anello</a>
   <a href="/gesa/palestra/"><span class="nav-icon">🧗</span> Palestra di Arrampicata</a>
-  <a href="/gesa/contrade/"><span class="nav-icon">🏘️</span> Contrade</a>
+  <a href="/gesa/contrade2/"><span class="nav-icon">🏘️</span> Contrade</a>
   <a href="/gesa/curiosita/"><span class="nav-icon">🏺</span> Curiosità</a>
   <a href="/gesa/contatti/"><span class="nav-icon">📞</span> Contatti</a>
 </nav>
@@ -221,7 +221,8 @@ Brancane, Quatrì, Schene, Sort o Ca di Roc, Tes, Tirù, Tunù, Ulia
 - Ogni contrada: card con immagine PNG poster full-size e link "Ingrandisci"
 - Fonte: poster PNG in `assets/img/contrade/`
 
-### Contrade2 — versione narrativa (`/contrade2/`, aprile 2026)
+### Contrade — versione narrativa (`/contrade2/`, sezione primaria da aprile 2026)
+Questa è la sezione principale accessibile da nav e homepage. La vecchia versione poster è nascosta in `/contrade/` e raggiungibile solo dal link interno "Versione poster (originale)".
 Stessa struttura di 8 contrade ma con pagine individuali e testo HTML
 - **Fonte testi**: estratti visivamente dai poster PNG originali (via lettura immagine AI)
 - **Foto**: ritagliate dai poster con Pillow, salvate in `assets/img/contrade2/*-foto.jpg`
@@ -284,4 +285,4 @@ for fpath in html_files:
 
 ---
 
-*Ultimo aggiornamento: aprile 2026 — aggiunta sezione Contrade2 (versione narrativa con foto ritagliate e pagine individuali per le 8 contrade), sezione Curiosità (Calchera e Poiat), favicon aggiornata con logo reale, navigazione estesa.*
+*Ultimo aggiornamento: aprile 2026 — Contrade2 promossa a sezione primaria (nav + homepage puntano a `/contrade2/`), vecchia versione poster nascosta, mappa contrade integrata in `contrade2/index.html`.*

@@ -4,7 +4,15 @@
   <url><loc>https://www.gruppoecologicoselvinoaviatico.it/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
   <url><loc>https://www.gruppoecologicoselvinoaviatico.it/sentieri/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.gruppoecologicoselvinoaviatico.it/palestra/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.gruppoecologicoselvinoaviatico.it/contrade/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gruppoecologicoselvinoaviatico.it/contrade2/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gruppoecologicoselvinoaviatico.it/contrade2/brancane/</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.gruppoecologicoselvinoaviatico.it/contrade2/quatri/</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.gruppoecologicoselvinoaviatico.it/contrade2/schene/</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.gruppoecologicoselvinoaviatico.it/contrade2/sort/</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.gruppoecologicoselvinoaviatico.it/contrade2/tes/</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.gruppoecologicoselvinoaviatico.it/contrade2/tiru/</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.gruppoecologicoselvinoaviatico.it/contrade2/tunu/</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.gruppoecologicoselvinoaviatico.it/contrade2/ulia/</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.gruppoecologicoselvinoaviatico.it/curiosita/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.gruppoecologicoselvinoaviatico.it/curiosita/calchera/</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.gruppoecologicoselvinoaviatico.it/curiosita/poiat/</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
