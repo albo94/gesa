@@ -7,11 +7,13 @@ Questo file documenta la struttura, le convenzioni e le regole di sviluppo del s
 ## Identità del progetto
 
 - **Nome:** GESA – Gruppo Ecologico Selvino Aviatico
-- **URL produzione:** `https://albo94.github.io/gesa/` (base path: `/gesa/`)
-- **Dominio alternativo:** `https://www.gruppoecologicoselvinoaviatico.it/` (CNAME vuoto, non attivo)
+- **URL produzione:** `https://www.gruppoecologicoselvinoaviatico.it/` (base path: `/`)
+- **GitHub Pages fallback:** `https://albo94.github.io/gesa/` → redirect automatico al dominio custom
 - **Repository:** `https://github.com/albo94/gesa.git` (branch `main`)
-- **Hosting:** GitHub Pages — push su `main` → deploy automatico, nessuna CI/CD aggiuntiva
+- **Hosting:** GitHub Pages con dominio custom (CNAME: `www.gruppoecologicoselvinoaviatico.it`)
+- **DNS:** configurato su Aruba — CNAME `www` → `albo94.github.io`, A record apex → IP GitHub Pages
 - **Stack:** HTML statico + CSS + JavaScript vanilla, nessun framework, nessun CMS
+- **⚠️ Base path:** tutti i link usano `/` (radice) — NON più `/gesa/`
 
 ---
 
@@ -161,12 +163,12 @@ Impegnativo: #dc2626 (rosso)
 
 ```html
 <nav class="nav-desktop">
-  <a href="/gesa/">Home</a>
-  <a href="/gesa/sentieri/">Sentieri</a>
-  <a href="/gesa/palestra/">Palestra</a>
-  <a href="/gesa/contrade2/">Contrade</a>
-  <a href="/gesa/curiosita/">Curiosità</a>
-  <a href="/gesa/contatti/">Contatti</a>
+  <a href="/">Home</a>
+  <a href="/sentieri/">Sentieri</a>
+  <a href="/palestra/">Palestra</a>
+  <a href="/contrade2/">Contrade</a>
+  <a href="/curiosita/">Curiosità</a>
+  <a href="/contatti/">Contatti</a>
 </nav>
 ```
 
@@ -174,12 +176,12 @@ Impegnativo: #dc2626 (rosso)
 
 ```html
 <nav class="nav-mobile" id="navMobile">
-  <a href="/gesa/"><span class="nav-icon">🏠</span> Home</a>
-  <a href="/gesa/sentieri/"><span class="nav-icon">🥾</span> Sentieri ad Anello</a>
-  <a href="/gesa/palestra/"><span class="nav-icon">🧗</span> Palestra di Arrampicata</a>
-  <a href="/gesa/contrade2/"><span class="nav-icon">🏘️</span> Contrade</a>
-  <a href="/gesa/curiosita/"><span class="nav-icon">🏺</span> Curiosità</a>
-  <a href="/gesa/contatti/"><span class="nav-icon">📞</span> Contatti</a>
+  <a href="/"><span class="nav-icon">🏠</span> Home</a>
+  <a href="/sentieri/"><span class="nav-icon">🥾</span> Sentieri ad Anello</a>
+  <a href="/palestra/"><span class="nav-icon">🧗</span> Palestra di Arrampicata</a>
+  <a href="/contrade2/"><span class="nav-icon">🏘️</span> Contrade</a>
+  <a href="/curiosita/"><span class="nav-icon">🏺</span> Curiosità</a>
+  <a href="/contatti/"><span class="nav-icon">📞</span> Contatti</a>
 </nav>
 ```
 
@@ -303,4 +305,4 @@ for fpath in html_files:
 
 ---
 
-*Ultimo aggiornamento: aprile 2026 — loghi reali (CAI, Alpini, Cacciatori) integrati in `curiosita/index.html`, cartella `assets/img/loghi/` creata, struttura cartelle documentata.*
+*Ultimo aggiornamento: aprile 2026 — migrazione a dominio custom `www.gruppoecologicoselvinoaviatico.it`: tutti i path aggiornati da `/gesa/` a `/`, CNAME configurato, DNS su Aruba da impostare (vedi sotto).*
