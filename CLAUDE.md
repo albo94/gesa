@@ -42,7 +42,12 @@ nuovo-sito/                  ← root del sito
 │       │   └── logo-cacciatori.jpg  ← Sezione Cacciatori Selvino
 │       ├── contrade/            ← 8 PNG poster contrade (originali)
 │       ├── contrade2/           ← 8 JPG foto ritagliate per la versione narrativa
+│       ├── notizie/
+│       │   ├── 2026-04-18/      ← 5 foto uscita quinta elementare (censurate, 788×1400)
+│       │   └── 2026-03-28/      ← 1 foto uscita prima media (censurata)
 │       └── ...                  ← Foto varie (palestra, panorami, QR)
+├── assets/pdf/
+│   └── geologia-altopiano-prima-media-2026.pdf  ← Presentazione geologia (non linkata in nav)
 ├── sentieri/
 │   ├── index.html           ← Elenco 12 sentieri
 │   └── a001/ … a012/        ← Pagine dettaglio sentieri (ArcGIS embed)
@@ -66,8 +71,14 @@ nuovo-sito/                  ← root del sito
 │   │   └── index.html       ← La Calchera di Selvino (IT + EN)
 │   └── poiat/
 │       └── index.html       ← Il Poiat – carbonaia (IT + EN)
+├── notizie/
+│   ├── index.html           ← Elenco notizie (news-grid, 2 card per ora)
+│   ├── 2026-04-18-uscita-scolastica/
+│   │   └── index.html       ← Quinta elementare: Calchera, Poiat, cartelli
+│   └── 2026-03-28-uscita-prima-media/
+│       └── index.html       ← Prima media: geologia dell'Altopiano
 ├── contatti/
-│   └── index.html
+│   └── index.html           ← Mappa: Oratorio Selvino, Via Scuole 8
 ├── qrcode/
 │   ├── a001/ … a012/        ← Redirect QR sentieri
 │   └── p001/ … p005/        ← Redirect QR palestra
@@ -168,6 +179,7 @@ Impegnativo: #dc2626 (rosso)
   <a href="/palestra/">Palestra</a>
   <a href="/contrade2/">Contrade</a>
   <a href="/curiosita/">Curiosità</a>
+  <a href="/notizie/">Notizie</a>
   <a href="/contatti/">Contatti</a>
 </nav>
 ```
@@ -181,6 +193,7 @@ Impegnativo: #dc2626 (rosso)
   <a href="/palestra/"><span class="nav-icon">🧗</span> Palestra di Arrampicata</a>
   <a href="/contrade2/"><span class="nav-icon">🏘️</span> Contrade</a>
   <a href="/curiosita/"><span class="nav-icon">🏺</span> Curiosità</a>
+  <a href="/notizie/"><span class="nav-icon">📰</span> Notizie</a>
   <a href="/contatti/"><span class="nav-icon">📞</span> Contatti</a>
 </nav>
 ```
@@ -252,10 +265,37 @@ Stessa struttura di 8 contrade ma con pagine individuali e testo HTML
 - Genera pagine con: `../gen_contrade2.py` (script Python nella root del progetto)
 
 ### Curiosità (aggiunto aprile 2026)
-- **Calchera:** forno per cottura pietra calcarea (IT+EN, sidebar dati tecnici)
+- **Calchera di Selvino:** forno per cottura pietra calcarea (IT+EN, sidebar dati tecnici)
 - **Poiat:** carbonaia in dialetto lombardo (IT+EN, sidebar dati tecnici)
 - Testo fonte: pannelli informativi originali (file `.pub` in `../curiosità/`)
 - Crediti hub page: loghi reali in `assets/img/loghi/` (CAI, Alpini, Cacciatori) — sostituiscono le emoji nelle feature-card
+- ⚠️ Il nome corretto è **Calchera di Selvino** (non "di Serina") — aggiornato in tutto il sito ad aprile 2026
+
+### Notizie (aggiunto aprile 2026)
+- Hub: `/notizie/index.html` — griglia di card notizie (news-grid, ordine cronologico inverso)
+- Ogni articolo ha: hero image, corpo testo, sidebar con info giornata + approfondimenti
+- Foto con volti di minori: **obbligatoriamente censurate** prima di pubblicare
+- ⚠️ Le foto censurate provengono dalla cartella sorgente `../18 aprile 2026/` o `../28 marzo 2026/` — usare i file `*_censored.jpg`
+- Collegamento homepage: sezione "Ultime notizie" prima del CTA banner
+
+**Articoli pubblicati:**
+
+| Data | Slug | Classe | Tema |
+|------|------|--------|------|
+| 18 apr 2026 | `2026-04-18-uscita-scolastica` | Quinta elementare Selvino | Calchera, Poiat, installazione cartelli con GESA + Alpini + Cacciatori |
+| 28 mar 2026 | `2026-03-28-uscita-prima-media` | Prima media Selvino | Geologia dell'Altopiano (lezione in aula + uscita sul campo con geologo) |
+
+**Componenti CSS specifici articolo:**
+- `.article-layout` — grid 1fr + 280px sidebar (da 900px)
+- `.article-hero-img` — max-height 480px, object-fit cover
+- `.article-meta` — tag + data
+- `.article-sidebar` / `.sidebar-card` — sidebar con bordo verde sinistro
+- `.photo-gallery` — griglia 2→3 colonne con lightbox JS (openLb/closeLb)
+- `.news-card` / `.news-grid` — card elenco notizie nella hub page
+
+### Contatti (aggiornato aprile 2026)
+- Mappa Google Maps: **Oratorio di Selvino, Via Scuole 8** (embed con query per indirizzo)
+- Referente: Massimo Grigis — 335 537 2168
 
 ---
 
@@ -265,7 +305,7 @@ Stessa struttura di 8 contrade ma con pagine individuali e testo HTML
 # Sviluppo locale
 cd "C:\Users\Alberto Grigis\MEGA\00_PERSONALE\15_gesa\sitoweb gesa\nuovo-sito"
 python3 -m http.server 8080
-# Apri: http://localhost:8080/gesa/
+# Apri: http://localhost:8080/
 
 # Deploy
 git add .
