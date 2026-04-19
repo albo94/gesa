@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notizie ed Eventi – GESA Selvino Aviatico</title>
+  <meta name="description" content="Ultime notizie, eventi e attività del Gruppo Ecologico Selvino Aviatico: uscite didattiche, lavori sul territorio, iniziative per le scuole.">
+  <link rel="canonical" href="https://www.gruppoecologicoselvinoaviatico.it/notizie/">
+  <meta property="og:title" content="Notizie – GESA Selvino Aviatico">
+  <meta property="og:description" content="Ultime notizie, eventi e attività del Gruppo Ecologico Selvino Aviatico.">
+  <meta property="og:url" content="https://www.gruppoecologicoselvinoaviatico.it/notizie/">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    .news-grid { display:grid; grid-template-columns:1fr; gap:var(--sp-8); margin-top:var(--sp-8); }
+    @media(min-width:700px){ .news-grid { grid-template-columns:repeat(2,1fr); } }
+    @media(min-width:1024px){ .news-grid { grid-template-columns:repeat(3,1fr); } }
+    .news-card { background:var(--color-white); border-radius:var(--r-lg); overflow:hidden; box-shadow:var(--shadow); transition:transform var(--transition),box-shadow var(--transition); text-decoration:none; color:inherit; display:flex; flex-direction:column; }
+    .news-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-lg); }
+    .news-card-img { width:100%; aspect-ratio:16/9; object-fit:cover; display:block; }
+    .news-card-body { padding:var(--sp-5) var(--sp-6); flex:1; display:flex; flex-direction:column; }
+    .news-card-date { font-size:.78rem; font-weight:700; color:var(--color-text-muted); text-transform:uppercase; letter-spacing:.05em; margin-bottom:var(--sp-2); }
+    .news-card-title { font-size:1.15rem; font-weight:800; color:var(--color-text); margin-bottom:var(--sp-3); line-height:1.35; }
+    .news-card-excerpt { font-size:.9rem; color:var(--color-text); line-height:1.6; flex:1; }
+    .news-card-cta { display:inline-block; margin-top:var(--sp-4); font-size:.85rem; font-weight:700; color:var(--color-primary); }
+    .news-tag { display:inline-block; background:var(--color-primary); color:#fff; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; padding:2px 10px; border-radius:99px; margin-bottom:var(--sp-2); }
+  </style>
+</head>
+<body>
+
+<header class="site-header"><div class="container header-inner">
+  <a href="/" class="logo"><img src="/assets/img/logo-gesa.png" alt="Logo GESA" class="logo-img"><div class="logo-text"><span class="logo-title">GESA</span><span class="logo-sub">Selvino · Aviatico</span></div></a>
+  <nav class="nav-desktop"><a href="/">Home</a><a href="/sentieri/">Sentieri</a><a href="/palestra/">Palestra</a><a href="/contrade2/">Contrade</a><a href="/curiosita/">Curiosità</a><a href="/notizie/" class="active">Notizie</a><a href="/contatti/">Contatti</a></nav>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMobile" aria-label="Apri menu"><span></span><span></span><span></span></button>
+</div></header>
+<nav class="nav-mobile" id="navMobile">
+  <a href="/"><span class="nav-icon">🏠</span> Home</a>
+  <a href="/sentieri/"><span class="nav-icon">🥾</span> Sentieri ad Anello</a>
+  <a href="/palestra/"><span class="nav-icon">🧗</span> Palestra di Arrampicata</a>
+  <a href="/contrade2/"><span class="nav-icon">🏘️</span> Contrade</a>
+  <a href="/curiosita/"><span class="nav-icon">🏺</span> Curiosità</a>
+  <a href="/notizie/"><span class="nav-icon">📰</span> Notizie</a>
+  <a href="/contatti/"><span class="nav-icon">📞</span> Contatti</a>
+</nav>
+
+<section class="page-hero">
+  <div class="container page-hero-content">
+    <nav class="breadcrumb"><a href="/">Home</a><span class="sep">›</span><span>Notizie</span></nav>
+    <div class="hero-badge">📰 Attività ed eventi · GESA</div>
+    <h1>Notizie ed Eventi</h1>
+    <div class="hero-meta-pills">
+      <span class="meta-pill">🌿 Uscite sul territorio</span>
+      <span class="meta-pill">🏫 Iniziative scolastiche</span>
+      <span class="meta-pill">🛠️ Lavori e restauri</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Ultime notizie</span>
+      <h2>Cosa fa il GESA</h2>
+      <p>Uscite didattiche con le scuole, manutenzione dei sentieri, restauro di manufatti storici e molto altro.</p>
+    </div>
+    <div class="news-grid">
+
+      <a href="/notizie/2026-04-18-uscita-scolastica/" class="news-card reveal">
+        <img src="/assets/img/notizie/2026-04-18/3.jpg" alt="Uscita didattica 18 aprile 2026" class="news-card-img" loading="lazy">
+        <div class="news-card-body">
+          <span class="news-tag">Uscita didattica</span>
+          <div class="news-card-date">18 Aprile 2026</div>
+          <div class="news-card-title">Una mattina nei boschi con le scuole</div>
+          <div class="news-card-excerpt">Una classe in visita sul territorio dell'Altopiano: i ragazzi hanno scoperto i sentieri del GESA, la Calchera e i pannelli informativi lungo i percorsi.</div>
+          <span class="news-card-cta">Leggi l'articolo →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner">
+  <div class="container">
+    <h2>🥾 Esplora il territorio</h2>
+    <p>Scopri i 12 sentieri ad anello dell'Altopiano, tra boschi, contrade e manufatti storici.</p>
+    <a href="/sentieri/" class="btn btn-primary btn-lg">Tutti i sentieri</a>
+  </div>
+</div>
+
+<footer class="site-footer"><div class="container">
+  <div class="footer-grid">
+    <div class="footer-logo">
+      <a href="/" class="logo"><img src="/assets/img/logo-gesa.png" alt="Logo GESA" class="logo-img"><div class="logo-text"><span class="logo-title">GESA</span><span class="logo-sub">Selvino · Aviatico</span></div></a>
+      <p class="footer-tagline">Gruppo Ecologico Selvino Aviatico.<br>Altopiano di Selvino e Aviatico (BG).</p>
+    </div>
+    <div>
+      <h3 class="footer-heading">Sezioni</h3>
+      <ul class="footer-links">
+        <li><a href="/sentieri/">Sentieri ad Anello</a></li>
+        <li><a href="/palestra/">Palestra Arrampicata</a></li>
+        <li><a href="/contrade2/">Contrade</a></li>
+        <li><a href="/curiosita/">Curiosità</a></li>
+        <li><a href="/notizie/">Notizie</a></li>
+        <li><a href="/contatti/">Contatti</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer-heading">Notizie recenti</h3>
+      <ul class="footer-links">
+        <li><a href="/notizie/2026-04-18-uscita-scolastica/">Uscita didattica – 18 apr 2026</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Gruppo Ecologico Selvino Aviatico · Selvino (BG)</p>
+    <p>Sito su <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a></p>
+  </div>
+</div></footer>
+
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
