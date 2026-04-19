@@ -63,7 +63,7 @@ nuovo-sito/                  ← root del sito
 ├── curiosita/
 │   ├── index.html           ← Hub curiosità (con loghi partner reali)
 │   ├── calchera/
-│   │   └── index.html       ← La Calchera di Serina (IT + EN)
+│   │   └── index.html       ← La Calchera di Selvino (IT + EN)
 │   └── poiat/
 │       └── index.html       ← Il Poiat – carbonaia (IT + EN)
 ├── contatti/
