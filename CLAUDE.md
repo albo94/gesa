@@ -43,6 +43,7 @@ nuovo-sito/                  ← root del sito
 │       ├── contrade/            ← 8 PNG poster contrade (originali)
 │       ├── contrade2/           ← 8 JPG foto ritagliate per la versione narrativa
 │       ├── notizie/
+│       │   ├── 2026-05-16/      ← 3 foto Bus de la Scabla (censurate: 1.jpg, 4.jpg, 7.jpg)
 │       │   ├── 2026-04-18/      ← 5 foto uscita quinta elementare (censurate, 788×1400)
 │       │   └── 2026-03-28/      ← 1 foto uscita prima media (censurata)
 │       └── ...                  ← Foto varie (palestra, panorami, QR)
@@ -282,6 +283,7 @@ Stessa struttura di 8 contrade ma con pagine individuali e testo HTML
 
 | Data | Slug | Classe | Tema |
 |------|------|--------|------|
+| 16 mag 2026 | `2026-05-16-bus-de-la-scabla` | Terza elementare Selvino | Visita al Bus de la Scabla (area archeologica Aviatico): età del Rame, Bronzo, età romana |
 | 18 apr 2026 | `2026-04-18-uscita-scolastica` | Quinta elementare Selvino | Calchera, Poiat, installazione cartelli con GESA + Alpini + Cacciatori |
 | 28 mar 2026 | `2026-03-28-uscita-prima-media` | Prima media Selvino | Geologia dell'Altopiano (lezione in aula + uscita sul campo con geologo) |
 
