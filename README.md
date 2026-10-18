@@ -55,6 +55,7 @@ GitHub Pages si aggiorna in 1-2 minuti. Se si aggiunge una pagina, aggiungerla a
 
 - `CNAME` — senza, il dominio smette di funzionare
 - `2277fcd37b87f3d614e676de0a97268c.txt` — chiave IndexNow
+- `google54564db78cc022e4.html` — verifica Google Search Console
 - `robots.txt`, `sitemap.xml`, `llms.txt` — letti da motori di ricerca e assistenti AI
 
 ## Dominio

@@ -31,6 +31,7 @@ nuovo-sito/                  ← root del sito
 ├── sitemap.xml              ← Con lastmod; aggiornare quando si aggiungono pagine
 ├── llms.txt                 ← Sintesi del sito per gli assistenti AI (aggiornare a mano)
 ├── 2277fcd37b87f3d614e676de0a97268c.txt ← Chiave IndexNow: NON cancellare (sembra un residuo, non lo è)
+├── google54564db78cc022e4.html ← Verifica Google Search Console: NON cancellare né rinominare
 ├── CNAME                    ← www.gruppoecologicoselvinoaviatico.it (NON svuotare: toglie il dominio)
 ├── .nojekyll                ← Disabilita Jekyll su GitHub Pages
 ├── CLAUDE.md                ← Questo file (pubblico!)
@@ -354,7 +355,7 @@ Intervento del 18/10/2026, con la stessa impostazione dei siti CISAC e Ambulanza
 **HTTPS** — forzato e funzionante (verificato il 18/10/2026: `http://` e il dominio senza `www` rimandano con 301 a `https://www.`).
 
 **Da fare con gli account dell'associazione** (non si può fare da qui):
-- **Google Search Console**: proprietà non verificata (né file `google….html` né TXT nel DNS Aruba). Verificarla, inviare la sitemap e chiedere l'indicizzazione di home, sentieri e palestra. Il file di verifica, una volta messo in radice, **non va più cancellato**. Se si usa il TXT su Aruba: **aggiungere** il record, non sostituire quello SPF già presente (`v=spf1 include:_spf.aruba.it ~all`), che serve alla posta.
+- **Google Search Console** (18/10/2026): proprietà **prefisso URL** `https://www.gruppoecologicoselvinoaviatico.it/` con il file `google54564db78cc022e4.html` in radice, e proprietà **dominio** con un TXT `google-site-verification=…` aggiunto su Aruba accanto a SPF, DKIM (`a1._domainkey`) e DMARC. **Né il file né il TXT vanno rimossi**: Google ricontrolla e, se spariscono, la proprietà torna non verificata. Poi: sitemap e richiesta di indicizzazione di home, sentieri e palestra.
 - **Bing Webmaster Tools**: importare da Search Console.
 - **Scheda Google** (Profilo dell'attività) per la palestra, se l'associazione la vuole.
 
