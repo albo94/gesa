@@ -1,0 +1,52 @@
+# GESA – Gruppo Ecologico Selvino Aviatico
+
+> Associazione di volontariato dell'Altopiano di Selvino e Aviatico (provincia di Bergamo,
+> circa 1000 m di quota). Cura 12 sentieri ad anello segnalati, gestisce una palestra di
+> arrampicata indoor all'Oratorio di Selvino e racconta la storia del territorio: le contrade
+> storiche di Selvino, la Calchera e il Poiat, restaurati dal GESA.
+
+## In breve
+
+- **Nome**: Gruppo Ecologico Selvino Aviatico (GESA)
+- **Dove**: Selvino (BG), Altopiano di Selvino e Aviatico, Prealpi Orobiche
+- **Contatti**: Massimo Grigis, telefono 335 537 2168
+- **Sede della palestra**: Oratorio di Selvino, Via Scuole 8, 24020 Selvino (BG)
+- **Collabora con**: CAI Valserina, Gruppo Alpini di Selvino, Sezione Cacciatori di Selvino
+
+## Palestra di arrampicata
+
+- Indoor, all'Oratorio di Selvino, aperta a tutti i livelli
+- Orari: martedì e giovedì 20:30–23:00; occasionalmente sabato 14:00–18:00 (gli orari possono variare)
+- Ingresso: adulti 3 €, under 18 2 €, soci GESA gratis; si paga in palestra
+- Scarpette obbligatorie (in prestito su richiesta); minorenni accompagnati da un adulto;
+  mai arrampicare da soli; registro presenze da firmare a ogni accesso
+
+## Sentieri ad anello
+
+Ogni sentiero ha una pagina con mappa interattiva ArcGIS, video e traccia Relive.
+Ai punti di partenza ci sono cartelli con QR code che aprono la pagina del sentiero.
+
+| Codice | Sentiero | Difficoltà | Lunghezza | Dislivello | Tempo | Partenza |
+|---|---|---|---|---|---|---|
+| A001 | Periplo Alto Purito | Facile | 4,0 km | 185 m | 1:30 | Corso Milano (Banca), Selvino |
+| A002 | Vetta Purito | Facile | 2,2 km | 160 m | 1:00 | Via Fiume Serio, Selvino |
+| A003 | Valle Albino Scabla Funivia | Facile | 4,0 km | 545 m in discesa | 1:05 | Piazza Europa, Selvino |
+| A004 | Piazza Butì Bot Sciesopoli | Facile | 2,7 km | 100 m | 1:00 | Stazione della funivia, Selvino |
+| A005 | Cantor Perello Passata | Facile | 5,8 km | 277 m | 2:10 | Palazzetto dello Sport, Selvino |
+| A006 | Selvino Parchi Osio Roccolino | Facilissimo | 2,5 km | 103 m | 0:55 | Campi da tennis comunali, Selvino |
+| A007 | Amora Camocco Ganda | Impegnativo | 5,7 km | 439 m | 2:35 | Amora, via Amora Bassa |
+| A008 | Aviatico Fondo al di Albe San Rocco | Medio | 2,0 km | 131 m | 0:55 | Piazza del municipio, Aviatico |
+| A009 | Ama Predal Amora | Medio | 3,8 km | 151 m | 1:20 | Chiesa di Ama |
+| A010 | Vetta Poieto | Facile | 5,3 km | 530 m | 2:40 | Piazza del municipio, Aviatico |
+| A011 | Periplo Poieto | Medio | 5,7 km | 313 m | 2:15 | Piazza del municipio, Aviatico |
+| A012 | Giro di Miragolo dalla Passata | Facile | 5,0 km | 170 m | 1:30 | La Passata |
+
+## Pagine
+
+- [Home](https://www.gruppoecologicoselvinoaviatico.it/): presentazione del GESA e delle attività.
+- [Sentieri ad anello](https://www.gruppoecologicoselvinoaviatico.it/sentieri/): i 12 percorsi, da A001 ad A012 (ogni sentiero ha la sua pagina, es. https://www.gruppoecologicoselvinoaviatico.it/sentieri/a001/).
+- [Palestra di arrampicata](https://www.gruppoecologicoselvinoaviatico.it/palestra/): orari, tariffe, regolamento, domande frequenti.
+- [Le contrade di Selvino](https://www.gruppoecologicoselvinoaviatico.it/contrade2/): Brancane, Quatrì, Schene, Sort o Ca di Roc, Tes, Tirù, Tunù, Ulia — storia, etimologia, fotografie storiche.
+- [Curiosità](https://www.gruppoecologicoselvinoaviatico.it/curiosita/): [la Calchera di Selvino](https://www.gruppoecologicoselvinoaviatico.it/curiosita/calchera/), forno storico per la calce, e [il Poiat](https://www.gruppoecologicoselvinoaviatico.it/curiosita/poiat/), la carbonaia tradizionale (testi in italiano e inglese).
+- [Notizie](https://www.gruppoecologicoselvinoaviatico.it/notizie/): uscite didattiche con le scuole di Selvino.
+- [Contatti](https://www.gruppoecologicoselvinoaviatico.it/contatti/): referente e indirizzo.

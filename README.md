@@ -1,93 +1,45 @@
 # GESA – Gruppo Ecologico Selvino Aviatico
 
-Sito ufficiale del Gruppo Ecologico Selvino Aviatico.  
-Sviluppato con HTML/CSS/JS puro, ospitato su **GitHub Pages**.
+Sito ufficiale del Gruppo Ecologico Selvino Aviatico: **https://www.gruppoecologicoselvinoaviatico.it/**
 
-## Struttura
+HTML/CSS/JavaScript puro, nessun framework. Ospitato su **GitHub Pages** dal repository
+[`albo94/gesa`](https://github.com/albo94/gesa) (branch `main`), con dominio custom.
 
-```
-/
-├── index.html                  Homepage
-├── sentieri/
-│   ├── index.html              Elenco tutti i sentieri
-│   ├── a001/ … a012/           Pagine individuali dei 12 sentieri
-├── palestra/index.html         Palestra di arrampicata
-├── contrade/index.html         Le 8 contrade storiche
-├── qrcode/
-│   ├── a001/ … a012/           Redirect QR → /sentieri/aXXX/
-│   └── p001/ … p005/           Redirect QR → /palestra/
-├── assets/
-│   ├── css/style.css
-│   └── js/main.js
-├── favicon.svg
-├── 404.html
-├── CNAME                       Dominio custom
-├── robots.txt
-└── sitemap.xml
-```
+> Per le convenzioni di sviluppo, il design system e la cronologia delle scelte vedi **[CLAUDE.md](CLAUDE.md)**.
 
-## Deploy su GitHub Pages (prima volta)
+## Sezioni
 
-### 1. Crea il repository `albo94.github.io`
+| Percorso | Contenuto |
+|---|---|
+| `/` | Homepage |
+| `/sentieri/` · `/sentieri/a001/` … `a012/` | 12 sentieri ad anello (mappa ArcGIS, traccia Relive) |
+| `/palestra/` | Palestra di arrampicata (Oratorio di Selvino) |
+| `/contrade2/` · `/contrade2/<contrada>/` | Le 8 contrade storiche — versione narrativa (sezione principale) |
+| `/contrade/` | Versione poster originale (non in menu) |
+| `/curiosita/` · `calchera/` · `poiat/` | Calchera di Selvino e Poiat (IT + EN) |
+| `/notizie/` · `/notizie/<data-slug>/` | Notizie e uscite scolastiche |
+| `/contatti/` | Sede e referente |
+| `/qrcode/…` | Redirect dei QR code fisici sul territorio |
 
-> **Usa esattamente questo nome**: `albo94.github.io`  
-> Questo attiva il sito a `https://albo94.github.io/` con path assolute funzionanti.
-
-1. Vai su https://github.com/new
-2. Repository name: **`albo94.github.io`**
-3. Visibilità: **Public**
-4. Non aggiungere README (il repository deve essere vuoto)
-5. Crea il repository
-
-### 2. Push da questa cartella
-
-Apri il terminale in questa cartella (`nuovo-sito/`) ed esegui:
+## Sviluppo locale
 
 ```bash
-git init
-git add .
-git commit -m "Primo commit – sito GESA completo"
-git branch -M main
-git remote add origin https://github.com/albo94/albo94.github.io.git
-git push -u origin main
+python -m http.server 8080      # oppure, dalla cartella superiore: python -m http.server 8124 --directory nuovo-sito
 ```
 
-### 3. Abilita GitHub Pages
+Poi apri http://localhost:8080/ (i link usano percorsi assoluti da `/`, quindi serve un server: aprire i file con doppio clic non funziona).
 
-1. Vai su https://github.com/albo94/albo94.github.io/settings/pages
-2. Source: **Deploy from a branch**
-3. Branch: **main** / **(root)**
-4. Salva
+## Pubblicare le modifiche
 
-Il sito sarà attivo a: **https://albo94.github.io/** entro 1-2 minuti.
+Prima di pubblicare si rigenerano meta tag e dati strutturati e si lanciano i controlli
+(gli script stanno fuori dal repository, in `../04_Strumenti/`; comandi dalla cartella superiore):
 
----
+```bash
+python -I 04_Strumenti/geo_build.py
+python -I 04_Strumenti/geo_check.py
+```
 
-## Associare il dominio ufficiale (quando sei pronto)
-
-1. **Nel registrar del dominio** (`gruppoecologicoselvinoaviatico.it`):
-   - Aggiungi un record **CNAME**: `www` → `albo94.github.io`
-   - Oppure record **A** (apex) verso i 4 IP di GitHub Pages:
-     ```
-     185.199.108.153
-     185.199.109.153
-     185.199.110.153
-     185.199.111.153
-     ```
-
-2. **Su GitHub Pages** (settings/pages):
-   - Campo "Custom domain": `www.gruppoecologicoselvinoaviatico.it`
-   - Spunta "Enforce HTTPS"
-
-3. Il file `CNAME` in questo repo è già configurato correttamente.
-
-4. **I redirect QR code continuano a funzionare** automaticamente perché i percorsi `/qrcode/a001/` etc. esistono come file HTML nel repository.
-
----
-
-## Aggiornare il sito
-
-Dopo aver modificato i file:
+Poi, dalla cartella del sito:
 
 ```bash
 git add .
@@ -95,42 +47,36 @@ git commit -m "Descrizione delle modifiche"
 git push
 ```
 
-GitHub Pages si aggiorna automaticamente entro 1-2 minuti.
+GitHub Pages si aggiorna in 1-2 minuti. Se si aggiunge una pagina, aggiungerla anche a `sitemap.xml`
+(con `lastmod`) e, se importante, a `llms.txt`. Dopo la pubblicazione:
+`python -I 04_Strumenti/indexnow.py <percorso>/` avvisa Bing e gli altri motori.
 
----
+## File da non cancellare
 
-## Sviluppo locale
+- `CNAME` — senza, il dominio smette di funzionare
+- `2277fcd37b87f3d614e676de0a97268c.txt` — chiave IndexNow
+- `robots.txt`, `sitemap.xml`, `llms.txt` — letti da motori di ricerca e assistenti AI
 
-Per vedere il sito in locale con tutti i link funzionanti:
+## Dominio
 
-```bash
-# Dalla cartella nuovo-sito/
-python -m http.server 8080
-```
-
-Poi apri: http://localhost:8080/
-
----
+- File `CNAME`: `www.gruppoecologicoselvinoaviatico.it`
+- DNS su Aruba: CNAME `www` → `albo94.github.io`; record A dell'apex verso gli IP di GitHub Pages
+  (`185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`)
+- Su GitHub → Settings → Pages: custom domain impostato, "Enforce HTTPS" attivo
+- `https://albo94.github.io/gesa/` reindirizza automaticamente al dominio
 
 ## Redirect QR code
 
-I QR code fisici sul territorio puntano a:
-`http://www.gruppoecologicoselvinoaviatico.it/qrcode/aXXX`
+I QR code fisici puntano a `…/qrcode/<codice>` e reindirizzano alla pagina giusta.
+**Non rinominare né spostare le pagine di destinazione**: i cartelli sul territorio non si possono ristampare facilmente.
 
-Dopo il deploy questi URL vengono serviti direttamente dalle pagine in `/qrcode/aXXX/index.html`
-che reindirizzano istantaneamente alla pagina del sentiero corrispondente.
+| QR code | Destinazione |
+|---|---|
+| `/qrcode/a001` … `/qrcode/a012` | `/sentieri/a001/` … `/sentieri/a012/` |
+| `/qrcode/p001` … `/qrcode/p005` | `/palestra/` |
+| `/qrcode/calchera` | `/curiosita/calchera/` |
+| `/qrcode/poiat` | `/curiosita/poiat/` |
 
-| QR code | Redirect a |
-|---------|-----------|
-| /qrcode/a001 | /sentieri/a001/ |
-| /qrcode/a002 | /sentieri/a002/ |
-| … | … |
-| /qrcode/a012 | /sentieri/a012/ |
-| /qrcode/p001–p005 | /palestra/ |
+## Materiale sorgente
 
----
-
-## Link risorse esterne (salvati in `link-sentieri.md`)
-
-Tutti i link alle mappe ArcGIS, video Google Drive e tracce Relive sono salvati in:  
-`../link-sentieri.md`
+Foto originali, loghi, testi dei pannelli, script e archivio del vecchio sito stanno **fuori dal repository**, nella cartella superiore `sitoweb gesa/` (struttura descritta in [CLAUDE.md](CLAUDE.md)). I link alle risorse esterne dei sentieri sono in `../02_Materiali/link-sentieri.md`.
